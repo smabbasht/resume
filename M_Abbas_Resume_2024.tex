@@ -2,8 +2,8 @@
 %------------------------------------------------------------------------------
 %------------------------------------------------------------------------------
 % Resume in Latex
-% Author : Shubham Mazumder
-% Based off of: https://github.com/sb2nov/resume
+% Author : Muhammad Abbas
+% Based off of: https://github.com/smabbasht/resume
 % License : MIT
 %------------------------------------------------------------------------------
 %------------------------------------------------------------------------------
@@ -160,10 +160,10 @@
 \newcommand{\resumeItemListStart}{
 % \vspace{-1pt}
 \begin{itemize}}
-\vspace{0.1pt}
+\vspace{0.01pt}
 \newcommand{\resumeItemListEnd}{
 % \vspace{-6pt}
-\vspace{4pt}
+\vspace{2pt}
 \end{itemize}\vspace{-8pt}}
 
 %-------------------------------------------------------
@@ -175,7 +175,6 @@
 % -------------------------------------
 %----------HEADING---------------------
 % -------------------------------------
-
 \begin{flushleft}
 	\textbf{\large Muhammad Abbas} \\
 	\textit{Karachi, Pakistan} $|$
@@ -188,57 +187,8 @@
 \end{flushleft}
 
 % -------------------------------------
-%---------- PROFESSIONAL SUMMARY ------
-% -------------------------------------
-
-\section{Professional Summary}
-\vspace{-3pt}
-\begin{itemize}[leftmargin=0.15in, label={}]
-	{\item{
-            {Focused \highlight{Data Engineer} with a \highlight{Bachelor's in
-            Computer Science} from \highlight{Habib University}, Distinguished
-            for experience in \highlight{Rust} and \highlight{Data Science} on
-            top of experience with \highlight{Data Engineering tools}, with a
-            track record of collaboratively and independently delivering
-            \highlight{convertible PoCs} and then developing
-            \highlight{production tools} that saves several runtime hours of
-            cloud machines for fintech industry. Well versed in architectural
-            planning for Big data. Delivering well-documented, tested, and
-            operable code. Efficient in collaborating and communicating new
-            ideas and opinions and evaluating the existing ones}
-          \\ 
-    }}
-\end{itemize}
-\sectionspace
-
-% -------------------------------------
-%----------TECHNICAL SKILLS------------
-% -------------------------------------
-
-\section{Technical Skills}
-\subheadingtitlevspace
-\begin{itemize}[leftmargin=0.15in, label={}]
-	{\item{
-          \titleItem{Languages}{: Rust, Python, Scala, C/C++, Golang, SQL (Postgres, MSSQL,
-          MySQL), NoSQL (MongoDB), HTML, CSS, JS (basic)} \\
-          \titleItem{Data Eng. Tools}{: Spark, NiFi, Airflow, Databricks, Informatica}\\
-          \titleItem{Software Frameworks}{: Axum, Actix, Django, Flutter, RestFramework}\\
-          \titleItem{AI Frameworks}{: Tensorflow, PyTorch, JAX, NumPyro}\\
-          \titleItem{Cloud, DevOps and API Tools}{: AWS, Azure Cloud, GCP, Git,
-          Docker, Kubernetes, Postman, Linux (Longtime Desktop User)} \\
-          \titleItem{Others}{: Polars, Pandas, Design Patterns, Debugging, Root
-          Cause Analysis, Architecture Planning, Working with JSON \& Parquet}
-	}}
-\end{itemize}
-\sectionspace
-
-
-
-
-% -------------------------------------
 %----------EXPERIENCE------------------
 % -------------------------------------
-
 \section{Experience}
 \resumeSubHeadingListStart
 \resumeProjectHeading
@@ -290,42 +240,22 @@ Bahrain.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-% \resumeSubHeadingListStart
-% \resumeProjectHeading
-% {\titleItem{{Data Analyst Intern}} $|$ \emph{Edlab Pakistan} $-$ \small{Karachi, Pakistan}}{\small{Part-time} $|$ Sep 2021 -- Oct 2021}
-% \resumeItemListStart
-% \resumeItem{Worked on Data Collection, Cleaning, Manipulation and Organization
-% using NumPy, Pandas and Excel for Demographic Educational Data}
-% \resumeItemListEnd
-% \resumeSubHeadingListEnd
-
 \resumeSubHeadingListStart
 \resumeProjectHeading
 {\titleItem{{Student Mentor}} $|$ \emph{Habib University} $-$ \small{Karachi, Pakistan}}{\small{Part-time} $|$ Aug 2023 -- May 2024}
 \resumeItemListStart
-\resumeItem{\underline{Teaching Assistant for Data Structures \& Algorithms:}
+\resumeItem{\textbf{Teaching Assistant for Data Structures \& Algorithms:}
 Assisted students during labs and with assignments.}
-\resumeItem{\underline{Git \& Github Workshop Instructor:} Conducted
+\resumeItem{\textbf{Git \& Github Workshop Instructor:} Conducted
 two workshops on Git and GitHub.}
-\resumeItem{\underline{Teaching Assistant for Data Structures \& Algorithms:}
+\resumeItem{\textbf{Teaching Assistant for Data Structures \& Algorithms:}
 Assisted students during labs and with assignments DSA.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
+
 % -------------------------------------
 %----------EDUCATION-------------------
 % -------------------------------------
-
-% \section{Education}
-%   \resumeSubHeadingListStart
-%     \resumeSubheading
-%       {University of Utah}{Salt Lake City, UT}
-%       {MS in Computer Science | GPA: 3.86}{January 2021 -- December 2023} 
-%     \resumeSubheading
-%       {SRM University}{Chennai, TN, India}
-%       {Bachelor of Technology in Computer Science and Engineering | GPA: 3.4}{August 2012 -- May 2016}
-%   \resumeSubHeadingListEnd
-% \vspace{-12pt}
-
 \section{Education}
 \resumeSubHeadingListStart
 \resumeSubheading
@@ -343,17 +273,34 @@ Assisted students during labs and with assignments DSA.}
 
 \section{Projects}
 \resumeSubHeadingListStart
+
 \resumeProjectHeading
-{\titleItem{Astroflow (FYP)} $|$ \emph{PyTorch, Numpyro, Django, Postgres, SQLite,
-Javascript}}{Aug 2023 - May 2024}
+{\titleItem{Cortex: ETL Data Pipelines} $|$ \emph{Spark, Airflow, Kafka, Trino, AWS Cloud, PostgreSQL}}{Aug 2023 - May 2024}
+\resumeItemListStart
+\resumeItem{A Deep Learning framework to estimate population parameters of
+Binary Black holes under the leadership of RIT instructor, the framework was
+based on Normalizing flows for inference and Neural Nets for summarization and
+Feature extraction from unseen data.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\titleItem{Yohsin: Blazing-Fast Object Serialization Tool (Hackathon)} $|$ \emph{Rust}}{01 Jan 2025}
+\resumeItemListStart
+\resumeItem{A Deep Learning framework to estimate population parameters of
+Binary Black holes under the leadership of RIT instructor, the framework was
+based on Normalizing flows for inference and Neural Nets for summarization and
+Feature extraction from unseen data.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\titleItem{Astroflow: Bayesian Flow Networks Based Model} $|$ \emph{PyTorch, Django, Postgres, SQLite, Javascript}}{Aug 2023 - May 2024}
 \resumeItemListStart
 \resumeItem{A Deep Learning framework to estimate population parameters of
 Binary Black holes under the leadership of RIT instructor, the framwork was
 based on Normalizing flows for inference and Neural Nets for summarization and
 Feature extraction from unseen data.}
-\resumeItem{A Dashboard built with Django and Postgres that allows inferring
-from the model for the uploaded data and visualizing the results.}
 \resumeItemListEnd
+
 \resumeProjectHeading
 {\titleItem{Ferroflow (LS)} $|$ \emph{Rust}}{June 2024 - July 2024}
 \resumeItemListStart
@@ -361,26 +308,56 @@ from the model for the uploaded data and visualizing the results.}
 contains processors and utilities that can be used to build production-ready
 pipelines.}
 \resumeItemListEnd
+
 \resumeProjectHeading
 {\titleItem{Metosi (LS)} $|$ \emph{Python, LangGraph, SQL}}{Sept 2024 - Present}
 \resumeItemListStart
 \resumeItem{A financial multi-agentic chatbot that queries the SQL database
 attached to our data-lake in realtime based on the user's input and provides
 the relevant information in natural language.}
-\resumeItem{It also understands the financial dictionary, can parse FIX logs
-and do other day-to-day tasks in FinTech, removing other teams' dependency from
-developers.}
-\resumeItemListEnd
-\resumeProjectHeading
-{\titleItem{Infaaq NGO (Community Service)} $|$ \emph{Django, Flutter, Nodejs, React,
-HTML, CSS, Postgres, Javascript}}{Aug 2023 - Dec 2023}
-\resumeItemListStart
-\resumeItem{A Django Web-app with react frontend for web and flutter for
-Android and iOS that allowed users to register, volunteer, submit funds, apply
-for participations on NGO events etc and had relevant admin panels and user
-roles with role-based access control.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
+
+% ------------------------------------- 
+%----------Achievements-------------------
+% -------------------------------------
+\section{Certifications and Achievements}
+\subheadingtitlevspace
+\begin{itemize}[leftmargin=0.15in, label={}]
+	{\item{
+          \titleItem{IELTS-Academic}{: \textit{8 out of 9}} \hspace{4.25cm} \titleItem{GRE Math}{: \textit{165 out of 170}} \\
+          \titleItem{HU-TOPS Scholarship:}{100\% Merit Scholarship for 4-year Bachelor's degree in Computer Science} \\
+          \titleItem{ICPC Regionals:}{Secured 19th position in ICPC Regionals Asia Topi 2022} \\
+          \titleItem{Game of Codes 5.0}{Winner of Competitive Programming Competition Game of Codes 5.0 } \\
+            \textbf{Programming Certifications:}\\
+            - Building Data Lakes on AWS - [AWS - Coursera]\\
+            - Apache Spark 3 with Scala Hands-on with Big Data - [SkillShare]\\
+            - ETL and Data Pipelines with Shell, Airflow and Kafka - [IBM - Coursera]\\
+	}}
+\end{itemize}
+
+
+\sectionspace
+
+% -------------------------------------
+%----------TECHNICAL SKILLS------------
+% -------------------------------------
+\section{Technical Skills}
+\subheadingtitlevspace
+\begin{itemize}[leftmargin=0.15in, label={}]
+	{\item{
+          \titleItem{Languages}{: Rust, Python, Scala, C/C++, Golang, SQL (Postgres, MSSQL,
+          MySQL), NoSQL (MongoDB), HTML, CSS, JS (basic)} \\
+          \titleItem{Data Eng. Tools}{: Spark, NiFi, Airflow, Databricks, Informatica}\\
+          \titleItem{Software Frameworks}{: Axum, Actix, Django, Flutter, RestFramework}\\
+          \titleItem{AI Frameworks}{: Tensorflow, PyTorch, JAX, NumPyro}\\
+          \titleItem{Cloud, DevOps and API Tools}{: AWS, Azure Cloud, GCP, Git,
+          Docker, Kubernetes, Postman, Linux (Longtime Desktop User)} \\
+          \titleItem{Others}{: Polars, Pandas, Design Patterns, Debugging, Root
+          Cause Analysis, Architecture Planning, Working with JSON \& Parquet}
+	}}
+\end{itemize}
+\sectionspace
 
 %-------------------------------------------
 \end{document}
