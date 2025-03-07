@@ -244,11 +244,11 @@ Bahrain.}
 \resumeProjectHeading
 {\titleItem{{Student Mentor}} $|$ \emph{Habib University} $-$ \small{Karachi, Pakistan}}{\small{Part-time} $|$ Aug 2023 -- May 2024}
 \resumeItemListStart
-\resumeItem{\textbf{Teaching Assistant for Data Structures \& Algorithms:}
+\resumeItem{\underline{\textit{Teaching Assistant for Data Structures \& Algorithms:}}
 Assisted students during labs and with assignments.}
-\resumeItem{\textbf{Git \& Github Workshop Instructor:} Conducted
+\resumeItem{\underline{\textit{Git \& Github Workshop Instructor:}} Conducted
 two workshops on Git and GitHub.}
-\resumeItem{\textbf{Teaching Assistant for Data Structures \& Algorithms:}
+\resumeItem{\underline{\textit{Teaching Assistant for Data Structures \& Algorithms:}}
 Assisted students during labs and with assignments DSA.}
 \resumeItemListEnd
 \resumeSubHeadingListEnd
@@ -275,7 +275,21 @@ Assisted students during labs and with assignments DSA.}
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\titleItem{Cortex: ETL Data Pipelines} $|$ \emph{Spark, Airflow, Kafka, Trino, AWS Cloud, PostgreSQL}}{Aug 2023 - May 2024}
+{\titleItem{Cortex: Data Lake \& ELT Data Pipelines (Logiciel)} $|$ \emph{Spark, Airflow, Kafka, Trino, AWS Cloud, PostgreSQL}}{Jan 2025 - March 2025}
+\resumeItemListStart
+\resumeItem{Develop Spark pipelines using Scala for data ingestion and transformation of 375 Fix sessions daily spanning multiple products and environments, Orchestrate the workflow using Airflow dynamic dags.}
+\resumeItem{Setup Datalake and Mesh architecture S3 along with Trino for federated query. Utilize AWS Glue for catalogging}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\titleItem{Yohsin: High-Performance Object Serialization Tool (Hackathon)} $|$ \emph{Rust, tokio}}{09 Jan 2025}
+\resumeItemListStart
+\resumeItem{A high-performance, multi-threaded yet fault-tolerant, zero-copy serializer/deserializer handling serialization of 1M records (2.25GB) per second,
+supporting range deserialization, random access and checkpointing for stateful recovery, utilizing memory-mapped files and async I/O for quicker operations with no memory overhead.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\titleItem{Astroflow: Bayesian Flow Networks Based Model (FYP)} $|$ \emph{PyTorch, Django, Postgres, SQLite, Javascript}}{Aug 2023 - May 2024}
 \resumeItemListStart
 \resumeItem{A Deep Learning framework to estimate population parameters of
 Binary Black holes under the leadership of RIT instructor, the framework was
@@ -284,38 +298,23 @@ Feature extraction from unseen data.}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\titleItem{Yohsin: Blazing-Fast Object Serialization Tool (Hackathon)} $|$ \emph{Rust}}{01 Jan 2025}
+{\titleItem{Ferroflow: ETL framework (Logiciel)} $|$ \emph{Rust}}{June 2024 - July 2024}
 \resumeItemListStart
-\resumeItem{A Deep Learning framework to estimate population parameters of
-Binary Black holes under the leadership of RIT instructor, the framework was
-based on Normalizing flows for inference and Neural Nets for summarization and
-Feature extraction from unseen data.}
+\resumeItem{A Rust framework inspired by Nifi for ETL, modularized with processors and pipelines to facilitate re-usability.}
+\resumeItem{Improve the Large-File-Sorter by 50x using
+Ferroflow, sorting a massive FIX log file in 10 mins that took 500 minutes
+with .NET utility daily on Cloud.}
 \resumeItemListEnd
 
 \resumeProjectHeading
-{\titleItem{Astroflow: Bayesian Flow Networks Based Model} $|$ \emph{PyTorch, Django, Postgres, SQLite, Javascript}}{Aug 2023 - May 2024}
+{\titleItem{Metosi: Fix Logs Chatbot (Logiciel)} $|$ \emph{Python, langChain, langGraph, SQL, Trino}}{Sept 2024 - Jan 2025}
 \resumeItemListStart
-\resumeItem{A Deep Learning framework to estimate population parameters of
-Binary Black holes under the leadership of RIT instructor, the framwork was
-based on Normalizing flows for inference and Neural Nets for summarization and
-Feature extraction from unseen data.}
+\resumeItem{A multi-agentic chatbot that is fine-tuned on Fix logs and FinTech
+concepts, queries on our data-lake using a Trino's SQL-like interface in
+real-time. Enabled business teams to obtain insights directly, making the
+process 40\% faster.}
 \resumeItemListEnd
 
-\resumeProjectHeading
-{\titleItem{Ferroflow (LS)} $|$ \emph{Rust}}{June 2024 - July 2024}
-\resumeItemListStart
-\resumeItem{A rust framework inspired by Nifi for data transformation (ETL),
-contains processors and utilities that can be used to build production-ready
-pipelines.}
-\resumeItemListEnd
-
-\resumeProjectHeading
-{\titleItem{Metosi (LS)} $|$ \emph{Python, LangGraph, SQL}}{Sept 2024 - Present}
-\resumeItemListStart
-\resumeItem{A financial multi-agentic chatbot that queries the SQL database
-attached to our data-lake in realtime based on the user's input and provides
-the relevant information in natural language.}
-\resumeItemListEnd
 \resumeSubHeadingListEnd
 
 % ------------------------------------- 
@@ -346,13 +345,12 @@ the relevant information in natural language.}
 \subheadingtitlevspace
 \begin{itemize}[leftmargin=0.15in, label={}]
 	{\item{
-          \titleItem{Languages}{: Rust, Python, Scala, C/C++, Golang, SQL (Postgres, MSSQL,
-          MySQL), NoSQL (MongoDB), HTML, CSS, JS (basic)} \\
-          \titleItem{Data Eng. Tools}{: Spark, NiFi, Airflow, Databricks, Informatica}\\
-          \titleItem{Software Frameworks}{: Axum, Actix, Django, Flutter, RestFramework}\\
-          \titleItem{AI Frameworks}{: Tensorflow, PyTorch, JAX, NumPyro}\\
-          \titleItem{Cloud, DevOps and API Tools}{: AWS, Azure Cloud, GCP, Git,
-          Docker, Kubernetes, Postman, Linux (Longtime Desktop User)} \\
+          \titleItem{Languages}{: Python, Rust, Scala, C/C++, Golang, SQL,
+          NoSQL, HTML, CSS, JS (basic)} \\
+          \titleItem{Data Eng. Tools}{: Spark, Airflow, Kafka, Trino/Presto/Athena, AWS Glue, Iceberg, Hive, Hadoop, Nifi, Databricks, Informatica}\\
+          \titleItem{AI Frameworks}{: Tensorflow, PyTorch, Langchain, LangGraph, Pydantic-AI, JAX, NumPyro}\\
+          \titleItem{Software Frameworks \& Databases}{: Django, Flutter, REST, Qdrant, Milvus, Neo4j, PostgreSQL, Amazon RDS, MongoDB}\\
+          \titleItem{Cloud, DevOps and API Tools}{: Linux (Longtime Desktop User), AWS, Azure Cloud, GCP, Git, Docker, Kubernetes, Postman,} \\
           \titleItem{Others}{: Polars, Pandas, Design Patterns, Debugging, Root
           Cause Analysis, Architecture Planning, Working with JSON \& Parquet}
 	}}
