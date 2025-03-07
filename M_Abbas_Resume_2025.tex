@@ -163,7 +163,7 @@
 \vspace{0.01pt}
 \newcommand{\resumeItemListEnd}{
 % \vspace{-6pt}
-\vspace{2pt}
+\vspace{1pt}
 \end{itemize}\vspace{-8pt}}
 
 %-------------------------------------------------------
@@ -191,66 +191,51 @@
 % -------------------------------------
 \section{Experience}
 \resumeSubHeadingListStart
+
 \resumeProjectHeading
 {\titleItem{{Data Engineer I}} $|$ \emph{Logiciel Services LLC.} $-$ \small{United States}}{\small{Full-time} $|$ May 2024 --------- Present}
 \resumeItemListStart
-\resumeItem{Developed Rust pipelines for EOD processing of FIX logs to CAT
-files, C\# pipeline previously running in 500mins, got optimized to 50mins with
-Rust \& Nifi, saving around 400 mins daily on AWS machine.} 
-\resumeItem{Orchestrated the data ingestion, transformation and AI pipelines
-through airflow DAGs, triggering pipelines of Nifi, Spark, Rust and AI (Python)
-on daily basis.}
+\resumeItem{Led the development of Lake \& ELT pipelines (Cortex) and participated in the architecture meeting, convincing the team to use Spark instead of Nifi for ELT along with Kafka instead of Pulsar.}
+\resumeItem{Developed Rust pipelines (Ferroflow) for EOD processing of Fix logs, speeding up the legacy .NET utility process by 50x, saving 490 minutes daily of AWS EC2 Instance.}
+\resumeItem{Developed a finetuned SQL-query chatbot for financial logs, involving collaborating with FinTech teams and Global Operation teams to ensure the product fits the use-case, smoothening the process for business teams by 40\%.} 
 \resumeItemListEnd
-\resumeSubHeadingListEnd
 
-
-\resumeSubHeadingListStart
 \resumeProjectHeading
-{\titleItem{{Junior Data Engineer}} $|$ \emph{ImproData} $-$ \small{Victoria, Austrailia}}{ \small{Part-time} $|$ Dec 2023 -- March 2024 }
+{\titleItem{{Junior Data Engineer}} $|$ \emph{ImproData} $-$ \small{Victoria, Australia}}{ \small{Part-time} $|$ Dec 2023 -- March 2024 }
 \resumeItemListStart
 \resumeItem{Worked on Azure Databricks (PySpark) for risk management of
 cyber-security data, building bronze, silver and gold layers.}
 \resumeItem{Worked on automated pipeline dev using GCP Cloud Functions to
 transfer compressed json bulk data from local to GCS \& population to BigQuery}
 \resumeItemListEnd
-\resumeSubHeadingListEnd
 
-\resumeSubHeadingListStart
 \resumeProjectHeading
 {\titleItem{{DevOps Intern}} $|$ \emph{Pullflow Inc.} $-$ \small{San Jose, California}}{\small{Full-time} $|$ July 2023 - Aug 2023}
 \resumeItemListStart
-\resumeItem{Worked on AWS EKS (Kubernetes) and Docker as I was responsible for
+\resumeItem{Worked on AWS EKS (Kubernetes) and Docker. Was responsible for
 designing \& implementing the infrastructure that was on AWS to on-premise
 server.}
 \resumeItem{Worked on Budibase Dashboarding \& hosting it on
 pullflow subdomain using traefik for loadbalancing.}
 \resumeItemListEnd
-\resumeSubHeadingListEnd
 
-\resumeSubHeadingListStart
 \resumeProjectHeading
 {\titleItem{{Data Engineering Intern}} $|$ \emph{United Bank Limited} $-$ \small{Karachi, Pakistan}}{\small{Full-time} $|$ May 2023 -- Jun 2023}
 \resumeItemListStart
-\resumeItem{Built a pipeline using Informatica for streaming ingestion
-of UBL’s data from Qatar \& Bahrain in Hive Data Lake.}
-\resumeItem{Participated in architecture analysis of data ingestion to datalake
-of data from UBL Qatar \& Bahrain to ensure that the production AI pipelines
-running in realtime on UBL Pak's data can be used for data from Qatar \&
-Bahrain.}
+\resumeItem{Built an Informatica pipeline for streaming UBL’s data from Qatar \& Bahrain into Hive Data Lake; participated in architecture analysis to ensure production AI pipelines on UBL Pak’s data work for Qatar \& Bahrain.}
 \resumeItemListEnd
-\resumeSubHeadingListEnd
 
-\resumeSubHeadingListStart
 \resumeProjectHeading
 {\titleItem{{Student Mentor}} $|$ \emph{Habib University} $-$ \small{Karachi, Pakistan}}{\small{Part-time} $|$ Aug 2023 -- May 2024}
 \resumeItemListStart
-\resumeItem{\underline{\textit{Teaching Assistant for Data Structures \& Algorithms:}}
-Assisted students during labs and with assignments.}
+\resumeItem{\underline{\textit{Teaching Assistant for Object Oriented Programming:}}
+Took student labs and helped them with project \& assignments.}
 \resumeItem{\underline{\textit{Git \& Github Workshop Instructor:}} Conducted
-two workshops on Git and GitHub.}
+two workshops on Git and GitHub for beginner and intermediate users.}
 \resumeItem{\underline{\textit{Teaching Assistant for Data Structures \& Algorithms:}}
 Assisted students during labs and with assignments DSA.}
 \resumeItemListEnd
+
 \resumeSubHeadingListEnd
 
 % -------------------------------------
