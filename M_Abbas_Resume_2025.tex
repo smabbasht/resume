@@ -195,9 +195,16 @@
 \resumeProjectHeading
 {\titleItem{{Data Engineer I}} $|$ \emph{Logiciel Services LLC.} $-$ \small{United States}}{\small{Full-time} $|$ May 2024 --------- Present}
 \resumeItemListStart
-\resumeItem{Led the development of Lake \& ELT pipelines (Cortex) and participated in the architecture meeting, convincing the team to use Spark instead of Nifi for ELT along with Kafka instead of Pulsar.}
-\resumeItem{Developed Rust pipelines (Ferroflow) for EOD processing of Fix logs, speeding up the legacy .NET utility process by 50x, saving 490 minutes daily of AWS EC2 Instance.}
-\resumeItem{Developed a finetuned SQL-query chatbot for financial logs, involving collaborating with FinTech teams and Global Operation teams to ensure the product fits the use-case, smoothening the process for business teams by 40\%.} 
+\resumeItem{Led the development of Lake \& ELT pipelines (Cortex) and
+participated in the architecture meeting, convincing the team to use Spark
+instead of Nifi for ELT along with Kafka instead of Pulsar.}
+\resumeItem{Developed Rust pipelines (Ferroflow) for EOD processing of FIX logs
+along with Nifi pipeline, speeding up the legacy .NET utility process by 10x,
+saving 400 minutes daily of AWS EC2 instance.}
+\resumeItem{Developed a finetuned SQL-query chatbot for financial logs,
+involving collaborating with FinTech teams and Global Operation teams to ensure
+the product fits the use-case, smoothening the process for business teams by
+40\%.} 
 \resumeItemListEnd
 
 \resumeProjectHeading
@@ -285,10 +292,11 @@ Feature extraction from unseen data.}
 \resumeProjectHeading
 {\titleItem{Ferroflow: ETL framework (Logiciel)} $|$ \emph{Rust}}{June 2024 - July 2024}
 \resumeItemListStart
-\resumeItem{A Rust framework inspired by Nifi for ETL, modularized with processors and pipelines to facilitate re-usability.}
-\resumeItem{Improve the Large-File-Sorter by 50x using
-Ferroflow, sorting a massive FIX log file in 10 mins that took 500 minutes
-with .NET utility daily on Cloud.}
+\resumeItem{A Rust framework inspired by Nifi for ETL, modularized with
+processors and pipelines to facilitate re-usability.} 
+\resumeItem{Improved the Large-File-Sorting, chunking and processing by 10x
+using Ferroflow and Nifi, sorting a massive FIX log file in 50 mins that took
+500 minutes with .NET utility daily on Cloud.}
 \resumeItemListEnd
 
 \resumeProjectHeading
