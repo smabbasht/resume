@@ -1,0 +1,307 @@
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+% Resume in Latex
+% Author : Muhammad Abbas
+% Based off of: https://github.com/smabbasht/resume
+% License : MIT
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{soul}
+\input{glyphtounicode}
+\usepackage[margin=0.5in]{geometry}
+
+
+%----------FONT OPTIONS----------
+% Sans-serif Fonts
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault,light]{inter}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage{roboto}
+% \usepackage[sfdefault,medium]{InriaSans}
+\usepackage[default]{sourcesanspro}
+
+% Serif Fonts
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% -------------------------------------
+%----------PAGE SETUP------------------
+% -------------------------------------
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+% \addtolength{\oddsidemargin}{0.5pt}
+% \addtolength{\evensidemargin}{0.5pt}
+% \addtolength{\textwidth}{0.9in}
+% \addtolength{\topmargin}{-0.6in}
+% \addtolength{\textheight}{1.6in}
+
+% \addtolength{\oddsidemargin}{-.875in}
+% \addtolength{\evensidemargin}{-.875in}
+% \addtolength{\textwidth}{1.75in}
+% \addtolength{\topmargin}{-.875in}
+% \addtolength{\textheight}{1.75in}
+
+% URL style
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% ----------- Definitions -----------------------
+\def\spaceforrole{ }
+\definecolor{lightyellow}{cmyk}{0.00, 0.05, 0.20, 0.00} % Highlights
+\sethlcolor{lightyellow} % Highlights
+
+%--------------- Custom commands -----------------------
+
+\newcommand{\sectionspace}{
+\vspace{-15pt}
+}
+
+\newcommand{\subheadingtitlevspace}{
+\vspace{-3pt}
+}
+
+
+% Resume Item
+\newcommand{\resumeItem}[1]{
+  \item{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+% Titles
+\newcommand{\titleItem}[1]{
+  % \textsl{\textbf{#1}}
+  \textbf{#1}
+}
+
+
+% Highlighting
+\newcommand{\highlight}[1]{
+  \textsl{\textbf{#1}}
+  % \hl{\textsl{\textbf{#1}}}
+  % \textbf{#1}
+  % \textsl{\hl{#1}}
+}
+
+% Resume Subheading
+\newcommand{\resumeSubheading}[4]{
+  \item
+     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}l@{}l}     
+      {#1} & \titleItem{#3} | {#2} & \textit{#4}\\
+    \end{tabular*}\vspace{-10pt}
+}
+
+% \newcommand{\resumeSubheading}[4]{
+%   \item
+%     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+%       \textbf{#1} & #2 \\
+%       \textit{#3} & \textit{#4} \\
+%     \end{tabular*}\vspace{-8pt}
+% }
+
+
+
+% Resume Sub-sub heading
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{#1} & \textit{#2} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+% Resume Project Heading
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & \textit{ #2} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+%Resume Subheading List
+\newcommand{\resumeSubHeadingListStart}{\subheadingtitlevspace\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+%Resume Item List
+\newcommand{\resumeItemListStart}{
+% \vspace{-1pt}
+\begin{itemize}}
+\vspace{0.01pt}
+\newcommand{\resumeItemListEnd}{
+% \vspace{-6pt}
+\vspace{1pt}
+\end{itemize}\vspace{-8pt}}
+
+%-------------------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------------------------------------
+
+\begin{document}
+
+% -------------------------------------
+%----------HEADING---------------------
+% -------------------------------------
+\begin{flushleft}
+	\textbf{\large Abbas Taqvi} \\
+	\textit{Milan, Italy} $|$
+	\textit{+39 340 065 5647} $|$
+	\href{mailto:abbastaqvi81@gmail.com}{{\textit{@mail}}} $|$
+	\href{https://linkedin.com/in/abbastaqvi}{{\textit{@linkedin}}} $|$
+	\href{https://github.com/smabbasht}{{\textit{@github}}} $|$
+	\textit{English: C1, Italian: A2}
+	\vspace{-8pt}
+\end{flushleft}
+
+% -------------------------------------
+%----------EXPERIENCE------------------
+% -------------------------------------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\titleItem{{Data Engineer I (Founding Engineer)}} $|$ \emph{Logiciel Services LLC.} $-$ \small{United States, Remote}}{\small{May 2024 -- Nov 2025}}
+\resumeItemListStart
+\resumeItem{Designed the data infrastructure from scratch --- Spark/Kafka jobs, query engines, orchestrators, and a lakehouse over S3 --- housing 30B+ FIX records queryable in $<$1s with targeted predicates for Velocity Capital.}
+\resumeItem{Drove the architecture decision to replace Nifi with Spark (Scala) and Pulsar with Kafka, reducing pipeline component count from 12 to 5 and cutting deployment complexity in half.}
+\resumeItem{Built Ferroflow, a Rust ETL framework, to replace a legacy .NET batch utility for EOD FIX-log processing. Result: 500 min $\rightarrow$ 50 min daily (10$\times$), saving 400 EC2-minutes per run.}
+\resumeItem{Built a domain-specific Text2SQL chatbot (LangGraph + Trino) on FIX-protocol schemas, enabling Velocity Capital stakeholders to self-serve analytics --- reduced turnaround by 41\%.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\titleItem{{Junior Data Engineer}} $|$ \emph{ImproData} $-$ \small{Pinedale, WY, Remote}}{\small{Jan 2021 -- May 2022}}
+\resumeItemListStart
+\resumeItem{Built bronze/silver/gold layers on Azure Databricks (PySpark) for cyber-security risk analytics; automated bulk ingestion via GCP Cloud Functions (JSON $\rightarrow$ GCS $\rightarrow$ BigQuery), eliminating 3 hours of daily manual ETL.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\titleItem{{DevOps Intern}} $|$ \emph{Pullflow Inc.} $-$ \small{San Jose, CA, Remote}}{\small{Jul 2023 -- Aug 2023}}
+\resumeItemListStart
+\resumeItem{Migrated production infra from AWS EKS to on-premise Kubernetes; designed Docker orchestration and Traefik reverse-proxy layer from scratch with zero downtime.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\titleItem{{Data Engineering Intern}} $|$ \emph{United Bank Limited} $-$ \small{Karachi, Pakistan}}{\small{May 2023 -- Jun 2023}}
+\resumeItemListStart
+\resumeItem{Built cross-region Informatica streaming pipeline (Qatar \& Bahrain $\rightarrow$ Hive Data Lake); validated production AI pipeline compatibility against new regional schemas.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% -------------------------------------
+%----------EDUCATION-------------------
+% -------------------------------------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{Universit\`{a} degli Studi di Milano-Bicocca}{}
+{M.S. in Data Science}{Oct 2025 -- Present}
+\resumeSubheading
+{Habib University}{GPA: 3.31}
+{B.S. in Computer Science (100\% Merit Scholarship)}{Aug 2020 -- May 2024}
+\resumeSubHeadingListEnd
+\vspace{-8pt}
+
+% -------------------------------------
+%----------PROJECTS--------------------
+% -------------------------------------
+
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+{\titleItem{Kuza: FIX Data Lake \& ELT Platform} $|$ \emph{Scala, Spark, Airflow, Kafka, Trino, AWS S3, Glue}}{Jan 2025 -- Nov 2025}
+\resumeItemListStart
+\resumeItem{Designed Spark (Scala) ingestion pipelines for 375+ daily FIX sessions across 4 products. Replaced a fragmented Nifi topology with a single Spark job graph --- chose Spark for its native Scala API, lazy evaluation, and in-memory shuffle over Nifi's record-by-record routing.}
+\resumeItem{Architected S3-based Data Lake with Mesh ownership, Trino federated queries, and AWS Glue catalog. Orchestrated via Airflow dynamic DAGs auto-generated from YAML manifests --- zero manual DAG authoring per new product onboarding.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\titleItem{Yohsin: Zero-Copy Object Serializer (Hackathon)} $|$ \emph{Rust, tokio, mmap}}{Jan 2025}
+\resumeItemListStart
+\resumeItem{Built a zero-copy serializer in Rust from first principles: memory-mapped files (\texttt{mmap}) bypass the kernel's page cache copy; offset-indexed headers enable O(1) random access. Fault tolerance via append-only WAL --- stateful recovery in $<$50 ms.}
+\resumeItem{Sustained 1M records/s (2.25 GB/s) on commodity hardware; range deserialization skips irrelevant pages with near-zero memory overhead. Built in 24 hours.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\titleItem{Ferroflow: Rust ETL Framework} $|$ \emph{Rust}}{Jun 2024 -- Jul 2024}
+\resumeItemListStart
+\resumeItem{Modular ETL framework in Rust with processor/pipeline abstraction and zero-cost ownership semantics. Replaced legacy .NET FIX-log sorter: 500 min $\rightarrow$ 50 min daily (10$\times$), saving 400 EC2-minutes per run.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+{\titleItem{Astroflow: Bayesian Flow Networks (FYP)} $|$ \emph{PyTorch, JAX, NumPyro}}{Aug 2023 -- May 2024}
+\resumeItemListStart
+\resumeItem{Normalizing-flow inference pipeline for binary black-hole population estimation from gravitational-wave data. Trained on 10K+ simulated waveforms under RIT astrophysics supervision.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% -------------------------------------
+%----------TECHNICAL SKILLS------------
+% -------------------------------------
+\section{Technical Skills}
+\subheadingtitlevspace
+\begin{itemize}[leftmargin=0.15in, label={}]
+	{\item{
+          \titleItem{Languages}{: Rust, Python, Scala, C/C++ (CUDA), Golang, SQL} \\
+          \titleItem{Data Engineering}{: Spark, Airflow, Kafka, Trino, Iceberg, Hive, Hadoop, Databricks, AWS (S3, Glue, Lake Formation)} \\
+          \titleItem{AI / ML}{: PyTorch, JAX, NumPyro, LangChain, LangGraph, TensorFlow, Pydantic-AI} \\
+          \titleItem{Systems}{: Linux (daily driver), Docker, Kubernetes, AWS (EKS, EC2), Azure, GCP, Git} \\
+          \titleItem{Databases}{: PostgreSQL, MongoDB, Qdrant, Weaviate, Neo4j, Amazon RDS}
+	}}
+\end{itemize}
+\sectionspace
+
+% ------------------------------------- 
+%----------Achievements-------------------
+% -------------------------------------
+\section{Achievements}
+\subheadingtitlevspace
+\begin{itemize}[leftmargin=0.15in, label={}]
+	{\item{
+          \titleItem{ICPC Regionals}{: 19\textsuperscript{th} place, Asia Topi 2022} \hspace{1cm}
+          \titleItem{Game of Codes 5.0}{: 1\textsuperscript{st} place} \hspace{1cm}
+          \titleItem{IELTS}{: 8/9} \hspace{1cm}
+          \titleItem{GRE Quant}{: 165/170} \\
+          \titleItem{HU-TOPS}{: 100\% merit scholarship, 4-year B.S.} \hspace{1cm}
+          \titleItem{NVIDIA CUDA C/C++}{: Accelerated Computing Certification}
+	}}
+\end{itemize}
+
+%-------------------------------------------
+\end{document}
+
