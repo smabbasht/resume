@@ -1,0 +1,589 @@
+%==============================================================================
+% MASTER CV - Abbas Taqvi
+% Template base: RenderCV-style LaTeX layout (twocolentry / onecolentry blocks)
+% PURPOSE: single source of truth. NOT for submission as-is.
+% HOW TO USE: copy this file per application, then delete the sections, entries
+% and bullets that do not fit the role. The layout uses two-column blocks
+% (paracol), so for ATS-submitted versions switch to the single-column resume.
+% Compile with pdfLaTeX (twice).
+%==============================================================================
+
+
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm,
+]{geometry}
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 0, 0} % black: no colours
+\usepackage{enumitem} % for customizing lists
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Abbas Taqvi - Master CV},
+    pdfauthor={Abbas Taqvi},
+    pdfcreator={LaTeX},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generated PDF is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+% Some settings:
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\pagenumbering{gobble} % no page numbering
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    -1pt % left space
+}{
+    0.3 cm % top space
+}{
+    0.2 cm % bottom space
+}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % bullet list for entries
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0 cm + 0.00001 cm
+    }{
+        0 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % two column entries: body on the left, argument #2 right-aligned
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % header
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{25 pt}{25 pt}\selectfont Abbas Taqvi
+
+        \vspace{5 pt}
+
+        \normalsize
+        \mbox{Milan, Italy}%
+        \kern 4.0 pt%
+        \AND%
+        \kern 4.0 pt%
+        \mbox{\hrefWithoutArrow{mailto:abbastaqvi81@gmail.com}{abbastaqvi81@gmail.com}}%
+        \kern 4.0 pt%
+        \AND%
+        \kern 4.0 pt%
+        \mbox{\hrefWithoutArrow{tel:+393400655647}{+39 340 065 5647}}%
+        \kern 4.0 pt%
+        \\
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/abbastaqvi}{linkedin.com/in/abbastaqvi}}%
+        \kern 4.0 pt%
+        \AND%
+        \kern 4.0 pt%
+        \mbox{\hrefWithoutArrow{https://github.com/smabbasht}{github.com/smabbasht}}%
+    \end{header}
+
+    \vspace{5 pt - 0.3 cm}
+
+%------------------------------------------------------------------------------
+% PERSONAL INFORMATION (Europass-style; optional, drop for most applications)
+%------------------------------------------------------------------------------
+\section{Personal Information}
+
+\begin{twocolentry}{Syed Muhammad Abbas}
+    \textbf{First Name}
+\end{twocolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Haider}
+    \textbf{Middle Name}
+\end{twocolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Taqvi}
+    \textbf{Surname}
+\end{twocolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{March 1, 2003}
+    \textbf{Date of Birth}
+\end{twocolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Pakistani}
+    \textbf{Nationality}
+\end{twocolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Single}
+    \textbf{Marital Status}
+\end{twocolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{+39 340 065 5647}
+    \textbf{Phone}
+\end{twocolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{abbastaqvi81@gmail.com}
+    \textbf{Email}
+\end{twocolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Milan, Italy}
+    \textbf{Current Location}
+\end{twocolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{English (CEFR C1) \\ Italian (CEFR A2) \\ Urdu (native)}
+    \textbf{Languages}
+\end{twocolentry}
+
+%------------------------------------------------------------------------------
+% PROFESSIONAL SUMMARY (use ONE; variants kept as comments)
+%------------------------------------------------------------------------------
+\section{Professional Summary}
+\begin{onecolentry}
+    Data engineer with a founding-engineer background, currently pursuing an M.S. in Data Science at Milano-Bicocca. Built a lakehouse platform that queries 30B+ records in under a second, and a Rust ETL framework that runs 10$\times$ faster than the system it replaced. Seeking a data engineering internship in Italy.
+\end{onecolentry}
+
+% --- Variant: software engineering
+% Software engineer with a data-infrastructure background, currently pursuing an M.S. in Data Science at Milano-Bicocca. Built a Rust ETL framework 10$\times$ faster than the .NET system it replaced, a zero-copy Rust serializer sustaining 1M records per second, and production Kubernetes infrastructure. Seeking a software engineering internship in Italy.
+% --- Variant: AI / ML engineering
+% Data and AI engineer, currently pursuing an M.S. in Data Science at Milano-Bicocca. Built a multi-agent Text2SQL system (LangGraph, Trino) that cut analyst turnaround by 41\%, and a flow-based inference model that reduced a 300-minute inference to 2 seconds. Seeking an AI or ML engineering internship in Italy.
+
+%------------------------------------------------------------------------------
+% TECHNICAL SKILLS (consolidated)
+%------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Programming Languages:}
+        Python, Rust (incl. embedded Rust, tokio), Scala, C, C++ (CUDA), Go, SQL, NoSQL query languages, JavaScript, Dart, R, Verilog, RISC-V Assembly
+
+        \item \textbf{Data Engineering:}
+        Apache Spark (Scala, PySpark), Apache Kafka, Apache Airflow (dynamic DAGs), Trino / Presto / Athena, Apache Iceberg, Hive / Hadoop, Databricks, Apache NiFi, Informatica, AWS S3, AWS Glue, AWS Lake Formation, lakehouse / data lake / data mesh / data warehouse architecture, ETL / ELT, streaming and batch ingestion, medallion (bronze, silver, gold) layers, JSON and Parquet processing, schema management, file compaction and partitioning
+
+        \item \textbf{AI / ML Engineering:}
+        PyTorch, TensorFlow, Keras, JAX, NumPyro, LangChain, LangGraph, Pydantic-AI, RAG, Text2SQL and multi-agent systems, Gemini API, Hugging Face transformers (BERT), Word2Vec, normalizing flows, diffusion models, CUDA / GPU programming
+
+        \item \textbf{Databases and Vector Stores:}
+        PostgreSQL, MongoDB, Neo4j, Amazon RDS, Qdrant, Weaviate
+
+        \item \textbf{Cloud, DevOps and Infrastructure:}
+        AWS (S3, EKS, EC2, Glue, Lake Formation, RDS), Azure (Databricks), GCP (Cloud Functions, GCS, BigQuery), Docker, Kubernetes (EKS, MicroK8s), Helm, Traefik, Cloudflare (Tunnels, Pages), Linux (Ubuntu, long-time user), macOS, Git, CI/CD, self-hosting
+
+        \item \textbf{Frameworks and Tools:}
+        FastAPI, Django, Django REST Framework, Flutter, React, Scrapy, Playwright, Budibase, Power BI, DataGrip, Postman, Pandas, NumPy, Matplotlib, R Markdown
+
+        \item \textbf{Engineering Practices:}
+        Architecture planning, system design, design patterns, REST APIs, gRPC, root cause analysis, debugging, benchmarking and performance optimization
+    \end{highlights}
+\end{onecolentry}
+
+%------------------------------------------------------------------------------
+% WORK EXPERIENCE
+%------------------------------------------------------------------------------
+\section{Work Experience}
+
+\begin{twocolentry}{United States (Remote) \\ May 2024 -- Nov 2025}
+    \textbf{Data Engineer I (Founding Engineer)} \\
+    Logiciel Services LLC
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Recruited as a Founding Engineer in the Data and AI department; designed and built the company's entire backend data platform end-to-end: Kafka streaming ingestion, Spark (Scala) processing, S3 lakehouse storage, Trino query engine and Airflow orchestration. Simplified a 12-component architecture into 5.
+        \item Set up data lake, data mesh and data warehouse layers on S3 with Trino for federated queries and AWS Glue for cataloguing, housing financial data of 30B+ records that can be queried in under a second with appropriate filters.
+        \item Developed Spark pipelines in Scala for ingestion and transformation of US stock market FIX logs: 375+ FIX sessions daily across multiple products and environments, with streaming and batch ingestion, orchestrated through Airflow dynamic DAGs auto-generated from YAML configuration.
+        \item Improved operational reliability with schema control, file compaction logic and structured partitioning.
+        \item Wrote Ferroflow, a Rust ETL framework with composable processor and pipeline abstractions for end-of-day processing of FIX logs, running alongside a NiFi pipeline and replacing a legacy .NET utility: 500 min $\rightarrow$ 50 min daily (10$\times$ speedup, 90\% runtime reduction), saving 400 EC2-minutes per run.
+        \item Built Metosi, a domain-specific multi-agent Text2SQL chatbot (Python, LangGraph, Trino) that lets business teams and stakeholders at Velocity Capital query the data lake in natural language through a REST API, reducing analyst turnaround by 41\%.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{San Jose, CA (Remote) \\ Jul 2023 -- Aug 2023}
+    \textbf{DevOps Intern} \\
+    Pullflow Inc.
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Migrated production infrastructure from AWS EKS to on-premise Kubernetes (MicroK8s) and Docker: wrote Dockerfiles, Helm charts and a Traefik reverse-proxy configuration for load balancing.
+        \item Deployed a self-hosted Budibase analytics dashboard on a custom subdomain with a zero-downtime cutover.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Karachi, Pakistan (On-site) \\ May 2023 -- Jun 2023}
+    \textbf{Data Engineering Intern} \\
+    United Bank Limited
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Built a cross-region streaming pipeline in Informatica that ingested data from the Qatar and Bahrain regions into a Hive data lake.
+        \item Took part in architecture analysis and validated production AI pipelines against new regional schemas across 3 countries (Pakistan, Qatar, Bahrain).
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Pinedale, Wyoming, US (Remote) \\ Jan 2021 -- May 2022}
+    \textbf{Junior Data Engineer} \\
+    ImproData
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Built risk-management data pipelines for cyber-security data on Azure Databricks (PySpark), structured as bronze, silver and gold layers.
+        \item Automated bulk ingestion with GCP Cloud Functions, moving compressed JSON from local storage to GCS and loading it into BigQuery (JSON $\rightarrow$ GCS $\rightarrow$ BigQuery), eliminating about 3 hours of daily manual work.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Habib University, Karachi \\ Aug 2021 -- Sep 2021}
+    \textbf{Data Researcher} \\
+    Office of Institutional Research
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Collected, cleaned and manipulated institutional data with NumPy, Pandas and Excel to support research and reporting.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Remote (Volunteer) \\ Sep 2021 -- Oct 2021}
+    \textbf{Data Analysis Intern} \\
+    EdLab Pakistan
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Performed exploratory data analysis and built visualizations of key trends with Power BI and Excel.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Habib University, Karachi \\ Spring 2023 -- Spring 2024}
+    \textbf{Teaching Assistant} \\
+    Computer Science courses
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Data Structures and Algorithms (Spring 2023):} assisted students in labs and with assignments.
+        \item \textbf{Object-Oriented Programming and Design Methodologies (Fall 2023):} guided students through design patterns and object-oriented programming concepts.
+        \item \textbf{Algorithm Design and Analysis (Spring 2024):} helped students build a foundation in algorithm analysis and computational complexity.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Habib University, Karachi \\ 2023}
+    \textbf{Workshop Instructor} \\
+    Git and GitHub
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Conducted two workshops on the fundamentals of Git and GitHub, covering version control in collaborative software development.
+    \end{highlights}
+\end{onecolentry}
+
+%------------------------------------------------------------------------------
+% EDUCATION
+%------------------------------------------------------------------------------
+\section{Education and Training}
+
+\begin{twocolentry}{Milan, Italy \\ Oct 2025 -- Present}
+    \textbf{Universit\`a degli Studi di Milano-Bicocca} \\
+    M.S. in Data Science
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Coursework includes Data Semantics, Technological Infrastructures for Data Science and Statistical Modeling.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Karachi, Pakistan \\ Aug 2020 -- May 2024}
+    \textbf{Habib University} \\
+    B.S. in Computer Science
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item CGPA 3.31 (out of 4.0); HU-TOPS 100\% merit scholarship for the full four-year program.
+        \item Final year project: Astroflow, Bayesian inference with normalizing flows (see Projects and Research).
+    \end{highlights}
+\end{onecolentry}
+
+
+
+%------------------------------------------------------------------------------
+% PROJECTS
+%------------------------------------------------------------------------------
+\section{Projects}
+
+\textbf{Industry projects}
+
+\vspace{0.15 cm}
+
+\begin{twocolentry}{Logiciel Services LLC \\ Jan 2025 -- Nov 2025}
+    \textbf{Kuza: End-to-End FIX Data Platform} \\
+    \textit{Scala, Spark, Kafka, Airflow, Trino, AWS S3, AWS Glue, PostgreSQL, Docker}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Implemented FIX ingestion pipelines for 375+ daily sessions across multiple environments, with Spark (Scala) workflows orchestrated by Airflow dynamic DAGs auto-generated from YAML.
+        \item Built an S3-based data lake with Trino and AWS Glue for unified schema management and fast querying; streamed events through Kafka.
+        \item Improved reliability with schema control, file compaction logic and structured partitioning; reduced a fragmented 12-service topology to a 5-component architecture.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Logiciel Services LLC \\ Jun 2024 -- Jul 2024}
+    \textbf{Ferroflow: Rust ETL Framework} \\
+    \textit{Rust}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Architected a Rust ETL framework inspired by NiFi, with reusable processors, composable pipelines and zero-cost ownership semantics.
+        \item Achieved a 10$\times$ performance gain, cutting FIX-log processing from 500 minutes to about 50 minutes and saving 400 EC2-minutes per run.
+        \item Implemented optimized chunking, streaming and memory-mapped file strategies for large-file processing.
+        \item Integrated Ferroflow in hybrid mode with NiFi to allow a smooth migration away from legacy .NET workflows.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Logiciel Services LLC \\ Sep 2024 -- Jan 2025}
+    \textbf{Metosi: FIX Logs Multi-Agent Chatbot} \\
+    \textit{Python, LangChain, LangGraph, SQL, Trino, REST}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Built a multi-agent chatbot grounded in FIX logs, trade events and FinTech operational concepts, exposed through a REST API.
+        \item Connected the chatbot to Trino for real-time SQL queries over a 30B-record lake, enabling direct analytics without writing SQL.
+        \item Added retrieval, reasoning and execution flows with LangGraph for deterministic and interpretable outputs.
+        \item Reduced manual analyst effort by about 41\%.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.3 cm}
+
+\textbf{Academic and research projects}
+
+\vspace{0.15 cm}
+
+\begin{twocolentry}{Habib University \\ Aug 2023 -- May 2024}
+    \textbf{Astroflow: Bayesian Flow Networks (Final Year Project)} \\
+    \textit{PyTorch, Django, PostgreSQL}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Developed a Bayesian inference framework using normalizing flows for binary black-hole population modeling, under the guidance of Muhammad Zeeshan (PhD candidate, Rochester Institute of Technology).
+        \item Designed neural summarizers and feature extractors for unseen gravitational-wave-like data.
+        \item Reduced parameter inference from roughly 300 minutes with traditional statistical methods to about 2 seconds per inference.
+        \item Optimized PyTorch training loops for faster posterior sampling and better model stability; built a Django interface to run inference pipelines, organize experiments and visualize posterior samples.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Habib University \\ 3rd--8th semester}
+    \textbf{Course research projects}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Pedometer on RISC-V (3rd semester):} designed and implemented a pedometer system on the RISC-V architecture under Dr. Owais Waheed Talaat.
+        \item \textbf{CUDA Path Tracer with Binary Interval Hierarchies (6th semester):} GPU-accelerated path tracer in CUDA, focused on efficient data flow and computational balance.
+        \item \textbf{Applications of LLMs in Software Engineering (7th semester):} investigated downstream tasks of large language models, in particular automated code generation and maintenance.
+        \item \textbf{Explainable AI with Diffusion Models (8th semester):} explored explainability techniques using diffusion models in a computer vision course.
+        \item \textbf{Rust-based Compiler Construction:} research on compiler construction in Rust with Dr. Taj Muhammad Khan, focused on low-level optimizations in the compilation process.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.3 cm}
+
+\textbf{Personal and hackathon projects}
+
+\vspace{0.15 cm}
+
+\begin{twocolentry}{Hackathon \\ Jan 2025}
+    \textbf{Yohsin: High-Performance Serialization Tool} \\
+    \textit{Rust, tokio, mmap}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Built, in 24 hours, a zero-copy, multi-threaded serializer and deserializer that sustains about 1M records (2.25 GB) per second.
+        \item Used memory-mapped files, offset-indexed headers and async I/O for O(1) random access and low RAM overhead; added range deserialization and state checkpointing.
+        \item Added fault tolerance through an append-only write-ahead log with stateful recovery in under 50 ms, and built benchmark suites across record sizes and workloads.
+    \end{highlights}
+\end{onecolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Live on Google Play \\ and App Store}
+    \textbf{Bayaaz: Mobile App} \\
+    \textit{Flutter, FastAPI, PostgreSQL, Cloudflare, React}
+\end{twocolentry}
+\begin{onecolentry}
+    \begin{highlights}
+        \item Published a Flutter poetry app on both Google Play and the App Store, and maintain its backend: a stateless FastAPI service on PostgreSQL, exposed through Cloudflare tunnels, with a React frontend on Cloudflare Pages.
+        \item Evaluated self-hosted and cloud hosting options for cost and reliability at small scale, and over-the-air update options for Flutter with CI/CD discipline.
+    \end{highlights}
+\end{onecolentry}
+
+
+%------------------------------------------------------------------------------
+% RESEARCH AND CONFERENCES
+%------------------------------------------------------------------------------
+\section{Research and Conferences}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{Poster, The Computing Conference 2025 (SAI Conferences), London, UK:} ``Astroflow: Accelerating Parameter Inference of Binary Black Holes' Population using Flow-based Neural Networks.'' The work uses flow-based neural networks to reduce inference time from about 300 minutes with traditional statistical methods to about 2 seconds, and was supervised by Muhammad Zeeshan (PhD candidate, Rochester Institute of Technology).
+    \end{highlights}
+\end{onecolentry}
+
+%------------------------------------------------------------------------------
+% ACHIEVEMENTS
+%------------------------------------------------------------------------------
+\section{Achievements}
+
+\begin{twocolentry}{Habib University \\ 2020 -- 2024}
+    \begin{highlightsforbulletentries}
+        \item \textbf{HU-TOPS 100\% Scholarship} \\
+        Merit scholarship for the B.S. in Computer Science
+    \end{highlightsforbulletentries}
+\end{twocolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Green Island Youth Foundation \\ 2023}
+    \begin{highlightsforbulletentries}
+        \item \textbf{Winner, Game of Codes 5.0} \\
+        Competitive programming competition
+    \end{highlightsforbulletentries}
+\end{twocolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{Google \\ 2022}
+    \begin{highlightsforbulletentries}
+        \item \textbf{6th position country-wide, Google Kickstart (May 2022)} \\
+        Competitive programming competition
+    \end{highlightsforbulletentries}
+\end{twocolentry}
+
+\vspace{0.2 cm}
+
+\begin{twocolentry}{ICPC \\ 2022}
+    \begin{highlightsforbulletentries}
+        \item \textbf{19th position, ICPC Asia Topi Regionals 2022} \\
+        International Collegiate Programming Contest
+    \end{highlightsforbulletentries}
+\end{twocolentry}
+
+%------------------------------------------------------------------------------
+% TEST SCORES
+%------------------------------------------------------------------------------
+\section{Test Scores}
+\begin{onecolentry}
+    \begin{highlights}
+        \item \textbf{IELTS (International English Language Testing System):} 8.0 bands (out of 9.0)
+        \item \textbf{GRE (Graduate Record Examinations), Quantitative:} 165/170
+    \end{highlights}
+\end{onecolentry}
+
+\end{document}
