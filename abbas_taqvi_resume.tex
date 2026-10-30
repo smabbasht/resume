@@ -5,8 +5,10 @@
 %-------------------------
 
 
-\documentclass[letterpaper,10pt]{article}
+\documentclass[a4paper,10pt]{article}
 
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage[usenames,dvipsnames]{color}
@@ -20,6 +22,7 @@
 \pagestyle{fancy}
 \fancyhf{} % Clear all header and footer fields
 \fancyfoot{}
+\setlength{\footskip}{4pt}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -106,118 +109,90 @@
 %-----------SUMMARY-----------------
 \section{Professional Summary}
   \resumeSubHeadingListStart
-  \resumeItemPlain{Abbas is a Data engineer and an M.S. Data Science student at
-  Milano-Bicocca, looking for internship opportunities in a relevant role in
-  Italy. He has hands-on experience architecting data startegies and building
-  end-to-end data platform on cloud involving lakehouse, data mesh and
-  streaming solutions through Apache Airflow, Apache Spark, Kafka,
-  Trino/PrestoDB, Glue etc, over AWS. He built a lakehouse that allows querying
-  30B+ records in under a second, also developed a Rust ETL framework that runs
-  10$\times$ faster than the legacy .NET system, and a LangGraph Text2SQL agent
-  that cut analyst turnaround by 41\% for business teams.}
+    \resumeItemPlain{Data engineer and M.S. Data Science student at Milano-Bicocca seeking a business intelligence internship in Italy. Experience in Power BI and Excel analysis, SQL-based analytics, and cloud data pipelines. Built a natural-language analytics tool for business teams that reduced analyst turnaround by 41\%.}
   \resumeSubHeadingListEnd
 
-
-%-----------EDUCATION-----------------
-\section{Education}
+%-----------SKILLS-----------------
+\section{Technical Skills}
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {Universit\`a degli Studi di Milano-Bicocca}{Milan, Italy}
-      {Master of Science in Data Science; Grade: 26/30}{Oct 2025 -- Present}
-    \resumeSubheading
-      {Habib University}{Karachi, Pakistan}
-      {Bachelor of Science in Computer Science; GPA: 3.31; 100\% merit scholarship (HU-TOPS)}{Aug 2020 -- May 2024}
+    \resumeItemPlain{\textbf{Analytics \& Reporting}: SQL, Power BI, Excel, Python (Pandas, NumPy, Matplotlib), R}
+    \resumeItemPlain{\textbf{Data Platforms}: Trino, PostgreSQL, BigQuery, Hive, AWS S3 and Glue, Azure Databricks}
+    \resumeItemPlain{\textbf{Data Engineering}: ETL/ELT, data warehouses, lakehouses, Spark (Scala, PySpark), Airflow, Kafka, Informatica, schema management, Git}
   \resumeSubHeadingListEnd
-
 
 %-----------EXPERIENCE-----------------
-\section{Experience}
+\section{Professional Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
       {Logiciel Services LLC}{United States (Remote)}
-      {Data Engineer I}{May 2024 -- Nov 2025}
+      {Data Engineer I (Founding Engineer)}{May 2024 -- Nov 2025}
       \resumeItemListStart
-        \resumeItem{Data Platform}
-          {Built the entire data platform from scratch, Leveraging Airflow for
-          orchestration, Spark (Scala) for processing (ETL/ELT), Kafka for
-          streaming, Amazon S3 for storage, Iceberg as the table format, Trino
-          for query engine and AWS Glue for metadata. Simplified a
-          12-component architecture to 5, housing 30B+ records queryable in
-          $<$1s.}
-        \resumeItem{Ferroflow}
-          {Rust ETL framework with composable processor/pipeline abstractions,
-          replacing a legacy .NET monolith: 500 min $\rightarrow$ 50 min daily
-          (10$\times$ speedup), saving 400 EC2-minutes per day.}
-        \resumeItem{Text2SQL Chatbot}
-          {Multi-agent chatbot (Python, LangChain, LangGraph, Trino) that translates
-          natural language into SQL that queries the data lake via REST API, reducing
-          analyst turnaround by 41\% for business teams.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {ImproData}{Pinedale, WY (Remote)}
-      {Junior Data Engineer}{Jan 2021 -- May 2022}
-      \resumeItemListStart
+        \resumeItem{Business Analytics}
+          {Built Metosi, a Text2SQL chatbot (Python, LangGraph, Trino) enabling business teams at Velocity Capital to query financial data in natural language via a REST API; reduced analyst turnaround by 41\%.}
+        \resumeItem{Data Access}
+          {Built S3 lakehouse and warehouse layers with Trino and AWS Glue, supporting queries over 30B+ financial records in under a second with appropriate filters.}
         \resumeItem{Data Pipelines}
-          {Built pipelines on Azure Databricks (PySpark) and automated ingestion via GCP Cloud Functions (JSON $\rightarrow$ GCS $\rightarrow$ BigQuery), eliminating 3 hours of daily manual work.}
+          {Developed Spark (Scala) ingestion and transformation pipelines for 375+ daily FIX sessions, orchestrated with Airflow; improved reliability through schema control, compaction and partitioning.}
+        \resumeItem{ETL Performance}
+          {Developed a Rust ETL framework that cut daily FIX-log processing from 500 to 50 minutes, a 10$\times$ speedup over the legacy .NET utility.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Pullflow Inc.}{San Jose, CA (Remote)}
       {DevOps Intern}{Jul 2023 -- Aug 2023}
       \resumeItemListStart
-        \resumeItem{Kubernetes Migration}
-          {Migrated production services from AWS EKS to on-premise Kubernetes (MicroK8s): wrote Dockerfiles, Helm charts and a Traefik reverse-proxy config, with a zero-downtime cutover.}
+        \resumeItemPlain{Deployed a self-hosted Budibase analytics dashboard on a custom subdomain with a zero-downtime cutover.}
       \resumeItemListEnd
 
     \resumeSubheading
       {United Bank Limited}{Karachi, Pakistan}
       {Data Engineering Intern}{May 2023 -- Jun 2023}
       \resumeItemListStart
-        \resumeItem{Migration Pipeline}
-          {Built a cross-region migration pipeline in Informatica and validated ingestion across 3 countries.}
+        \resumeItemPlain{Built an Informatica streaming pipeline from Qatar and Bahrain into a Hive data lake; validated production AI pipelines against regional schemas across Pakistan, Qatar and Bahrain.}
       \resumeItemListEnd
 
+    \resumeSubheading
+      {ImproData}{Pinedale, WY (Remote)}
+      {Junior Data Engineer}{Jan 2021 -- May 2022}
+      \resumeItemListStart
+        \resumeItemPlain{Built cybersecurity risk-management pipelines in Azure Databricks (PySpark) using bronze, silver and gold layers. Automated JSON ingestion through GCP Cloud Functions, GCS and BigQuery, eliminating about 3 hours of daily manual work.}
+      \resumeItemListEnd
 
+    \resumeSubheading
+      {EdLab Pakistan}{Remote (Volunteer)}
+      {Data Analysis Intern}{Sep 2021 -- Oct 2021}
+      \resumeItemListStart
+        \resumeItemPlain{Performed exploratory data analysis and built visualizations of key trends with Power BI and Excel.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Habib University, Office of Institutional Research}{Karachi, Pakistan}
+      {Data Researcher}{Aug 2021 -- Sep 2021}
+      \resumeItemListStart
+        \resumeItemPlain{Collected, cleaned and manipulated institutional data with Pandas, NumPy and Excel to support research and reporting.}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-
-%-----------PROJECTS-----------------
-\section{Projects}
+%-----------EDUCATION-----------------
+\section{Education}
   \resumeSubHeadingListStart
-    \resumeSubItem{Kuza: End-to-End Data Platform}
-      {Spark (Scala) ingestion for 375+ daily sessions, Kafka streaming, S3 lakehouse, Trino and Airflow with DAGs auto-generated from YAML (Scala, Spark, Kafka, Airflow, Trino, AWS, Docker).}
-    \resumeSubItem{Yohsin: Zero-Copy Object Serializer}
-      {Rust serializer using memory-mapped files, O(1) random access and a write-ahead log for sub-50 ms recovery; sustained 1M records/s (2.25 GB/s). Built in 24 hours at a hackathon (Rust, tokio, mmap).}
+    \resumeSubheading
+      {Universit\`a degli Studi di Milano-Bicocca}{Milan, Italy}
+      {M.S. in Data Science}{Oct 2025 -- Present}
+    \resumeItemListStart
+      \resumeItemPlain{Coursework: Data Semantics, Technological Infrastructures for Data Science, Statistical Modeling.}
+    \resumeItemListEnd
+    \resumeSubheading
+      {Habib University}{Karachi, Pakistan}
+      {B.S. in Computer Science; GPA: 3.31/4.0}{Aug 2020 -- May 2024}
+    \resumeItemListStart
+      \resumeItemPlain{HU-TOPS 100\% merit scholarship for the full four-year program.}
+    \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-
-%--------SKILLS------------
-\section{Skills}
+\section{Languages}
   \resumeSubHeadingListStart
-    \resumeItemPlain{\textbf{Languages}: Python, Rust, Scala, C/C++ (CUDA), Go, SQL, JavaScript}
-    \resumeItemPlain{\textbf{Data \& Cloud}: Spark, Kafka, Airflow, Trino, Iceberg, Databricks, AWS (S3, EKS, EC2, Glue), Azure, GCP}
-    \resumeItemPlain{\textbf{Systems \& Infrastructure}: Linux, Docker, Kubernetes (EKS, MicroK8s), Traefik, REST APIs, gRPC, Git}
-    \resumeItemPlain{\textbf{AI / ML}: PyTorch, JAX, TensorFlow, LangChain, LangGraph, Pydantic-AI}
-    \resumeItemPlain{\textbf{Databases}: PostgreSQL, MongoDB, Neo4j, Qdrant, Weaviate, Amazon RDS}
-    \resumeItemPlain{\textbf{Spoken Languages}: English (C1), Italian (A2)}
+    \resumeItemPlain{English (C1; IELTS 8.0/9.0), Italian (A2), Urdu (native)}
   \resumeSubHeadingListEnd
 
-
-%-----------ACHIEVEMENTS-----------------
-\section{Achievements \& Test Scores}
-  \resumeSubHeadingListStart
-    \resumeItemPlain{\textbf{Tests Scores}: IELTS 8.0/9.0; GRE Quantitative 165/170}
-    \resumeItemPlain{\textbf{Competitive Programming}: ICPC Asia Topi Regionals
-    2022: 19\textsuperscript{th} place; Google Kickstart (May 2022):
-    6\textsuperscript{th} place country-wide}
-         
-  \resumeSubHeadingListEnd
-
-\begin{center}
-\scriptsize I authorize the processing of my personal data in accordance with EU Regulation 2016/679 (GDPR).
-\end{center}
-
-%-------------------------------------------
 \end{document}
