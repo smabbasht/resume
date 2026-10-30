@@ -109,7 +109,7 @@
 %-----------SUMMARY-----------------
 \section{Professional Summary}
   \resumeSubHeadingListStart
-  \resumeItemPlain{Software engineer with a data infrastructure background, pursuing an M.S. in Data Science at Milano-Bicocca. Built a Rust ETL framework that reduced processing time from 500 to 50 minutes, backend services exposed through REST APIs, and production Kubernetes infrastructure. Seeking a software engineering internship in Italy.}
+  \resumeItemPlain{Software engineer pursuing an M.S. in Data Science at Milano-Bicocca, with fullstack web and mobile development, Python AI agents, and distributed systems experience. Published an app on Google Play and the App Store with a React frontend and FastAPI backend. Use AI-assisted coding, automated testing and peer review; seeking Doctolib's Fullstack Software Engineering Internship in Milan.}
   \resumeSubHeadingListEnd
 
 
@@ -133,12 +133,12 @@
       {Logiciel Services LLC}{United States (Remote)}
       {Data Engineer I}{May 2024 -- Nov 2025}
       \resumeItemListStart
+        \resumeItem{AI-Powered Product: Text2SQL API}
+          {Built a Python multi-agent chatbot with LangGraph and Trino, enabling business teams to query data in natural language through a REST API; reduced analyst turnaround by 41\%.}
+        \resumeItem{Distributed Backend Platform}
+          {Designed and built an end-to-end platform with Kafka, Spark (Scala), S3, Trino and Airflow; simplified a 12-component architecture to 5 and improved reliability with schema control and partitioning.}
         \resumeItem{Ferroflow: Rust ETL Framework}
-          {Designed reusable processors and composable pipelines with chunking, streaming and memory-mapped file processing. Replaced a legacy .NET utility, reducing daily FIX-log processing from 500 to 50 minutes (10$\times$ faster).}
-        \resumeItem{Backend Data Platform}
-          {Built Kafka ingestion, Spark (Scala) processing, S3 storage, Trino queries and Airflow orchestration; simplified a 12-component architecture to 5. Added schema control, file compaction and partitioning for reliability.}
-        \resumeItem{Text2SQL API}
-          {Built a Python multi-agent chatbot with LangGraph and Trino, exposing natural-language queries through a REST API and reducing analyst turnaround by 41\%.}
+          {Designed reusable processors and composable pipelines with streaming and memory-mapped I/O; replaced a legacy .NET utility, reducing daily processing from 500 to 50 minutes (10$\times$ faster).}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -172,21 +172,22 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
+    \resumeSubItem{Bayaaz: Published Fullstack Web \& Mobile App}
+      {Published a Flutter poetry app on Google Play and the App Store; maintain a React frontend on Cloudflare Pages and a stateless Python FastAPI backend with PostgreSQL, exposed through Cloudflare tunnels.}
     \resumeSubItem{Yohsin: Zero-Copy Serializer (Rust)}
-      {Built a multi-threaded serializer/deserializer in 24 hours, sustaining about 1M records/s (2.25 GB/s). Used memory-mapped files and async I/O for O(1) random access; added write-ahead logging with recovery under 50 ms and benchmark suites.}
-    \resumeSubItem{Bayaaz: Published Mobile App}
-      {Published a Flutter poetry app on Google Play and the App Store; maintain a stateless FastAPI backend with PostgreSQL, exposed through Cloudflare tunnels, and a React frontend on Cloudflare Pages.}
+      {Built a multi-threaded serializer/deserializer in 24 hours, sustaining about 1M records/s (2.25 GB/s). Added async I/O, write-ahead logging with recovery under 50 ms, and benchmark suites.}
   \resumeSubHeadingListEnd
 
 
 %--------SKILLS------------
 \section{Skills}
   \resumeSubHeadingListStart
-    \resumeItemPlain{\textbf{Languages}: Python, Rust, Scala, C/C++ (CUDA), Go, SQL, JavaScript, Dart}
-    \resumeItemPlain{\textbf{Backend \& Apps}: FastAPI, Django, React, Flutter, REST APIs, gRPC, PostgreSQL, MongoDB}
-    \resumeItemPlain{\textbf{Infrastructure}: Linux, Docker, Kubernetes, Helm, Traefik, AWS, Azure, GCP, Git, CI/CD}
-    \resumeItemPlain{\textbf{Data \& Systems}: Spark, Kafka, Airflow, Trino, tokio, memory-mapped I/O, benchmarking}
-    \resumeItemPlain{\textbf{Spoken Languages}: English (C1), Italian (A2)}
+    \resumeItemPlain{\textbf{Languages}: Python, TypeScript, JavaScript, Rust, Scala, SQL, Dart, Go, C/C++}
+    \resumeItemPlain{\textbf{Fullstack}: React, React Native, FastAPI, Django, Flutter, REST APIs, PostgreSQL, MongoDB}
+    \resumeItemPlain{\textbf{Cloud \& Systems}: Docker, Kubernetes, AWS, Azure, GCP, Kafka, Spark, Airflow, Trino, LangGraph}
+    \resumeItemPlain{\textbf{Engineering}: AI-assisted coding, automated testing, peer code review, Git, CI/CD, system design}
+    \resumeItemPlain{\textbf{Collaboration}: Cross-functional collaboration with product managers and designers}
+    \resumeItemPlain{\textbf{Spoken Languages}: English (C1; IELTS 8.0/9.0), Italian (A2)}
   \resumeSubHeadingListEnd
 
 
