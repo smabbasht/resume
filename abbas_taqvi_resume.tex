@@ -5,8 +5,9 @@
 %-------------------------
 
 
-\documentclass[letterpaper,10pt]{article}
+\documentclass[a4paper,10pt]{article}
 
+\usepackage[T1]{fontenc}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage[usenames,dvipsnames]{color}
@@ -43,6 +44,7 @@
 
 % Ensure that generated PDF is machine readable/ATS parsable
 \pdfgentounicode=1
+\pdfinterwordspaceon
 
 %-------------------------
 % Custom commands
@@ -106,15 +108,7 @@
 %-----------SUMMARY-----------------
 \section{Professional Summary}
   \resumeSubHeadingListStart
-  \resumeItemPlain{Abbas is a Data engineer and an M.S. Data Science student at
-  Milano-Bicocca, looking for internship opportunities in a relevant role in
-  Italy. He has hands-on experience architecting data startegies and building
-  end-to-end data platform on cloud involving lakehouse, data mesh and
-  streaming solutions through Apache Airflow, Apache Spark, Kafka,
-  Trino/PrestoDB, Glue etc, over AWS. He built a lakehouse that allows querying
-  30B+ records in under a second, also developed a Rust ETL framework that runs
-  10$\times$ faster than the legacy .NET system, and a LangGraph Text2SQL agent
-  that cut analyst turnaround by 41\% for business teams.}
+  \resumeItemPlain{Data engineer and M.S. Data Science student at Milano-Bicocca with experience building Python analytics tools, financial data platforms and interactive dashboards. Developed a Text2SQL tool that reduced analyst turnaround by 41\% and a PyTorch inference framework that reduced inference from 300 minutes to 2 seconds. Seeking an ML and analytics internship in Milan; skills include scikit-learn, credit decision models, clustering, and ML model deployment and monitoring.}
   \resumeSubHeadingListEnd
 
 
@@ -138,47 +132,37 @@
       {Logiciel Services LLC}{United States (Remote)}
       {Data Engineer I}{May 2024 -- Nov 2025}
       \resumeItemListStart
-        \resumeItem{Data Platform}
-          {Built the entire data platform from scratch, Leveraging Airflow for
-          orchestration, Spark (Scala) for processing (ETL/ELT), Kafka for
-          streaming, Amazon S3 for storage, Iceberg as the table format, Trino
-          for query engine and AWS Glue for metadata. Simplified a
-          12-component architecture to 5, housing 30B+ records queryable in
-          $<$1s.}
-        \resumeItem{Ferroflow}
-          {Rust ETL framework with composable processor/pipeline abstractions,
-          replacing a legacy .NET monolith: 500 min $\rightarrow$ 50 min daily
-          (10$\times$ speedup), saving 400 EC2-minutes per day.}
-        \resumeItem{Text2SQL Chatbot}
-          {Multi-agent chatbot (Python, LangChain, LangGraph, Trino) that translates
-          natural language into SQL that queries the data lake via REST API, reducing
-          analyst turnaround by 41\% for business teams.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {ImproData}{Pinedale, WY (Remote)}
-      {Junior Data Engineer}{Jan 2021 -- May 2022}
-      \resumeItemListStart
-        \resumeItem{Data Pipelines}
-          {Built pipelines on Azure Databricks (PySpark) and automated ingestion via GCP Cloud Functions (JSON $\rightarrow$ GCS $\rightarrow$ BigQuery), eliminating 3 hours of daily manual work.}
+        \resumeItem{Python Analytics Tool}
+          {Built a multi-agent Text2SQL chatbot (Python, LangGraph, SQL, Trino) exposed through a REST API, enabling business stakeholders to query financial data in natural language and reducing analyst turnaround by 41\%.}
+        \resumeItem{Financial Data Platform}
+          {Designed and built Kafka, Spark, S3, Trino and Airflow pipelines for 30B+ financial records, queryable in under a second with appropriate filters; simplified a 12-component architecture to 5 and improved reliability through schema control and partitioning.}
+        \resumeItem{Reusable ETL Framework}
+          {Developed composable Rust processors and pipelines to replace a legacy .NET utility, cutting daily FIX-log processing from 500 to 50 minutes (10$\times$ speedup).}
       \resumeItemListEnd
 
     \resumeSubheading
       {Pullflow Inc.}{San Jose, CA (Remote)}
       {DevOps Intern}{Jul 2023 -- Aug 2023}
       \resumeItemListStart
-        \resumeItem{Kubernetes Migration}
-          {Migrated production services from AWS EKS to on-premise Kubernetes (MicroK8s): wrote Dockerfiles, Helm charts and a Traefik reverse-proxy config, with a zero-downtime cutover.}
+        \resumeItem{Dashboard Deployment \& DevOps}
+          {Deployed a Budibase analytics dashboard with a zero-downtime cutover; migrated AWS EKS services to MicroK8s using Dockerfiles, Helm charts and Traefik.}
       \resumeItemListEnd
 
     \resumeSubheading
       {United Bank Limited}{Karachi, Pakistan}
       {Data Engineering Intern}{May 2023 -- Jun 2023}
       \resumeItemListStart
-        \resumeItem{Migration Pipeline}
-          {Built a cross-region migration pipeline in Informatica and validated ingestion across 3 countries.}
+        \resumeItem{Banking Data \& AI Pipelines}
+          {Built an Informatica pipeline into a Hive data lake and validated production AI pipelines against regional schemas across Pakistan, Qatar and Bahrain.}
       \resumeItemListEnd
 
+    \resumeSubheading
+      {ImproData}{Pinedale, WY (Remote)}
+      {Junior Data Engineer}{Jan 2021 -- May 2022}
+      \resumeItemListStart
+        \resumeItem{Risk Data Pipelines}
+          {Built cyber-security risk-management pipelines with Azure Databricks (PySpark); automated JSON ingestion through GCS and BigQuery, eliminating 3 hours of daily manual work.}
+      \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
@@ -186,21 +170,20 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
-    \resumeSubItem{Kuza: End-to-End Data Platform}
-      {Spark (Scala) ingestion for 375+ daily sessions, Kafka streaming, S3 lakehouse, Trino and Airflow with DAGs auto-generated from YAML (Scala, Spark, Kafka, Airflow, Trino, AWS, Docker).}
-    \resumeSubItem{Yohsin: Zero-Copy Object Serializer}
-      {Rust serializer using memory-mapped files, O(1) random access and a write-ahead log for sub-50 ms recovery; sustained 1M records/s (2.25 GB/s). Built in 24 hours at a hackathon (Rust, tokio, mmap).}
+    \resumeSubItem{Astroflow: Bayesian Inference (Final Year Project)}
+      {Built normalizing-flow models and optimized PyTorch training loops for black-hole population modeling; reduced inference from 300 minutes to 2 seconds. Developed a Django interface to run inference, organize experiments and visualize posterior samples.}
+    \resumeSubItem{Bayaaz: Published Mobile App}
+      {Published a Flutter app on Google Play and the App Store; maintain a Python FastAPI backend with PostgreSQL and a React frontend, with CI/CD discipline.}
   \resumeSubHeadingListEnd
 
 
 %--------SKILLS------------
 \section{Skills}
   \resumeSubHeadingListStart
-    \resumeItemPlain{\textbf{Languages}: Python, Rust, Scala, C/C++ (CUDA), Go, SQL, JavaScript}
-    \resumeItemPlain{\textbf{Data \& Cloud}: Spark, Kafka, Airflow, Trino, Iceberg, Databricks, AWS (S3, EKS, EC2, Glue), Azure, GCP}
-    \resumeItemPlain{\textbf{Systems \& Infrastructure}: Linux, Docker, Kubernetes (EKS, MicroK8s), Traefik, REST APIs, gRPC, Git}
-    \resumeItemPlain{\textbf{AI / ML}: PyTorch, JAX, TensorFlow, LangChain, LangGraph, Pydantic-AI}
-    \resumeItemPlain{\textbf{Databases}: PostgreSQL, MongoDB, Neo4j, Qdrant, Weaviate, Amazon RDS}
+    \resumeItemPlain{\textbf{Programming \& Engineering}: Python, SQL, Rust, Scala, JavaScript, OOP, Git, CI/CD, DevOps}
+    \resumeItemPlain{\textbf{Data \& Dashboards}: Pandas, NumPy, Matplotlib, Power BI, Budibase, Django, FastAPI, Spark}
+    \resumeItemPlain{\textbf{AI / ML}: scikit-learn, PyTorch, TensorFlow, credit decision models, clustering, model deployment and monitoring, LangGraph}
+    \resumeItemPlain{\textbf{Cloud \& Databases}: AWS, Azure Databricks, GCP, Docker, Kubernetes, PostgreSQL, BigQuery}
     \resumeItemPlain{\textbf{Spoken Languages}: English (C1), Italian (A2)}
   \resumeSubHeadingListEnd
 
@@ -208,7 +191,7 @@
 %-----------ACHIEVEMENTS-----------------
 \section{Achievements \& Test Scores}
   \resumeSubHeadingListStart
-    \resumeItemPlain{\textbf{Tests Scores}: IELTS 8.0/9.0; GRE Quantitative 165/170}
+    \resumeItemPlain{\textbf{Test Scores}: IELTS 8.0/9.0; GRE Quantitative 165/170}
     \resumeItemPlain{\textbf{Competitive Programming}: ICPC Asia Topi Regionals
     2022: 19\textsuperscript{th} place; Google Kickstart (May 2022):
     6\textsuperscript{th} place country-wide}
