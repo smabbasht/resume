@@ -44,7 +44,7 @@ After confirmation:
 5. Use `master_cv.tex` to recover relevant factual details absent from the role resume.
 6. Rewrite bullets to communicate impact, ownership, and technical contributions accurately.
 7. Remove low-value content to maintain one-page length.
-8. Preserve the existing LaTeX template.
+8. Preserve the existing LaTeX template. Never restructure, reorder or add/remove sections or change formatting from `abbas_taqvi_resume.tex`.
 
 Optimize strongly for ATS matching, but never invent experience, metrics, proficiency, job titles, or qualifications.
 
@@ -55,6 +55,8 @@ Related technologies do not establish experience with the exact JD technology.
 Run `review-resume`, passing the job description as relevance context.
 
 Do not declare completion until the resulting PDF passes its checks.
+
+After validating, do a commit and push it, commit message example is "update(tex): update resume with JD tailoring for <role>".
 
 ## Output
 
