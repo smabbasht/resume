@@ -65,4 +65,4 @@ After validating, do a commit and push it, commit message example is "update(tex
 - Concise summary of important JD matches
 - Remaining genuine skill gaps
 
-Never modify `master_cv.tex`, create commits, or submit applications automatically.
+Never modify `master_cv.tex` or submit applications automatically.

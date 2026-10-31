@@ -23,6 +23,7 @@ description: Create or update an authentic, reusable one-page LaTeX resume for a
 8. Preserve verified facts and metrics. Never invent missing information.
 9. Select content to fit one A4 page without sacrificing readability.
 10. Run the `review-resume` skill to compile, inspect, and enforce the one-page requirement.
+11. Always commit after the review with commit message in format: (example) "update(tex): update resume for role SWE"
 
 ## Rules
 
