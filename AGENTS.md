@@ -26,7 +26,6 @@ For applications, prioritize the role resume, using the master CV for additional
 - Role resumes prioritize authenticity; application resumes prioritize ATS matching without misrepresentation.
 - Preserve the existing LaTeX design and readable formatting.
 - Every final resume must compile to **exactly one A4 page**, with readable PDF text extraction.
-- Do not commit, push, submit, or modify Git branches/worktrees without permission.
 
 ## Skills
 
