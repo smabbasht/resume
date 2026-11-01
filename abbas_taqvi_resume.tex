@@ -54,7 +54,6 @@
   }
 }
 
-% Just in case someone needs a heading that does not need to be in a list
 \newcommand{\resumeHeading}[4]{
     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
@@ -108,7 +107,7 @@
 %-----------SUMMARY-----------------
 \section{Professional Summary}
   \resumeSubHeadingListStart
-  \resumeItemPlain{Data analyst and M.S. Data Science student at Milano-Bicocca with hands-on experience translating raw data into business insights. Built a natural-language SQL tool that reduced analyst turnaround by 41\%, engineered pipelines making 30B+ financial records instantly queryable, and delivered exploratory analyses and visualizations across finance, education, and risk domains using SQL, Python, Power BI, and Excel.}
+  \resumeItemPlain{Data analyst and M.S. Data Science student at Milano-Bicocca, based in Milan. Experienced in SQL, Python, R, Tableau, Power BI, and Excel for reporting, dashboards, and ad-hoc analysis. Built a natural-language analytics tool that reduced analyst turnaround by 41\%, engineered pipelines making 30B+ financial records instantly queryable, and delivered exploratory analyses across finance, risk, and education domains. Effective cross-functional communicator comfortable supporting business stakeholders across European teams.}
   \resumeSubHeadingListEnd
 
 
@@ -132,44 +131,42 @@
       {Logiciel Services LLC}{United States (Remote)}
       {Data Engineer I}{May 2024 -- Nov 2025}
       \resumeItemListStart
-        \resumeItem{Analytics Tooling}
-          {Built Metosi, a multi-agent Text2SQL chatbot (Python, LangGraph, Trino) that lets business teams query a 30B-record financial data lake in natural language through a REST API, reducing analyst turnaround by 41\%.}
-        \resumeItem{Data Platform}
-          {Designed an S3 lakehouse with Spark, Trino and AWS Glue for 30B+ financial records, enabling sub-second analytical queries with structured partitioning, schema control, and file compaction for reliable reporting.}
-        \resumeItem{Pipeline Engineering}
-          {Developed Spark (Scala) ingestion pipelines for 375+ daily stock-market FIX sessions, with Airflow orchestration auto-generated from YAML, ensuring consistent and auditable data delivery for downstream analysis.}
+        \resumeItem{Self-Serve Analytics}
+          {Built a multi-agent Text2SQL tool (Python, LangGraph, Trino) enabling business stakeholders to query a 30B-record financial data lake in natural language through a REST API, reducing analyst turnaround by 41\% and eliminating recurring ad-hoc SQL requests.}
+        \resumeItem{Reporting \& Data Pipelines}
+          {Designed an S3 lakehouse with Spark, Trino and AWS Glue for 30B+ financial records, enabling sub-second analytical queries; developed ingestion pipelines for 375+ daily sessions with Airflow orchestration for reliable downstream reporting.}
       \resumeItemListEnd
 
     \resumeSubheading
       {United Bank Limited}{Karachi, Pakistan}
       {Data Engineering Intern}{May 2023 -- Jun 2023}
       \resumeItemListStart
-        \resumeItem{Cross-Region Data Integration}
-          {Built an Informatica pipeline ingesting data from Qatar and Bahrain into a Hive data lake, and validated production AI pipelines against regional schemas across 3 countries, ensuring data consistency for analytics.}
+        \resumeItem{Cross-Functional Data Collaboration}
+          {Built an Informatica pipeline integrating data from Qatar and Bahrain into a Hive data lake; cooperated with cross-functional teams to validate production pipelines against regional schemas across 3 countries, resolving data inconsistencies for analytics use.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Habib University, Office of Institutional Research}{Karachi, Pakistan}
       {Data Researcher}{Aug 2021 -- Sep 2021}
       \resumeItemListStart
-        \resumeItem{Institutional Analytics}
-          {Collected, cleaned, and manipulated institutional datasets with Pandas, NumPy, and Excel to support research reporting and organizational decision-making.}
+        \resumeItem{Ad-Hoc Analysis \& Reporting}
+          {Collected, cleaned, and wrangled institutional datasets using Pandas, NumPy, and Excel to support ad-hoc research requests and produce reports for organizational decision-making.}
       \resumeItemListEnd
 
     \resumeSubheading
       {EdLab Pakistan}{Remote (Volunteer)}
       {Data Analysis Intern}{Sep 2021 -- Oct 2021}
       \resumeItemListStart
-        \resumeItem{Exploratory Analysis}
-          {Performed EDA on education datasets and built Power BI and Excel visualizations of key trends to support program evaluation.}
+        \resumeItem{Dashboards \& Exploration}
+          {Performed EDA on education datasets and built dashboards and visualizations of key trends using Tableau and Excel to support program evaluation and stakeholder reporting.}
       \resumeItemListEnd
 
     \resumeSubheading
       {ImproData}{Pinedale, WY (Remote)}
       {Junior Data Engineer}{Jan 2021 -- May 2022}
       \resumeItemListStart
-        \resumeItem{Risk Data Pipelines}
-          {Built cybersecurity risk-management pipelines in Azure Databricks (PySpark) with medallion layers; automated JSON ingestion into BigQuery via GCP Cloud Functions, eliminating $\sim$3 hours of daily manual work.}
+        \resumeItem{Data Pipelines}
+          {Built risk-management data pipelines in Azure Databricks (PySpark) and automated JSON ingestion into BigQuery via GCP Cloud Functions, eliminating $\sim$3 hours of daily manual work.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -178,15 +175,15 @@
 \section{Projects}
   \resumeSubHeadingListStart
     \resumeSubItem{Astroflow: Bayesian Parameter Inference}
-      {Normalizing-flow framework in PyTorch for binary black-hole population modeling; reduced inference from $\sim$300 minutes to $\sim$2 seconds. Built a Django interface to organize experiments and visualize posterior distributions.}
+      {Normalizing-flow framework in PyTorch for predictive modelling of binary black-hole populations; reduced inference from $\sim$300 minutes to $\sim$2 seconds. Built a Django interface to run inference pipelines and visualize posterior distributions.}
   \resumeSubHeadingListEnd
 
 
 %--------SKILLS------------
 \section{Skills}
   \resumeSubHeadingListStart
-    \resumeItemPlain{\textbf{Analysis \& Reporting}: SQL, Python (Pandas, NumPy, Matplotlib), R, Power BI, Excel, R Markdown}
-    \resumeItemPlain{\textbf{Data Preparation}: ETL/ELT, Spark (PySpark, Scala), Databricks, Airflow, Informatica, schema management}
+    \resumeItemPlain{\textbf{Analysis \& Reporting}: SQL, Python (Pandas, NumPy, Matplotlib), R, Tableau, Power BI, Excel, R Markdown}
+    \resumeItemPlain{\textbf{Data Wrangling \& Pipelines}: ETL/ELT, Spark (PySpark, Scala), Databricks, Airflow, Informatica, schema management}
     \resumeItemPlain{\textbf{Databases \& Cloud}: PostgreSQL, BigQuery, Trino, AWS (S3, Glue), Azure Databricks, GCP (GCS, Cloud Functions)}
     \resumeItemPlain{\textbf{Tools}: Git, Linux, Docker}
     \resumeItemPlain{\textbf{Spoken Languages}: English (C1), Italian (A2), Urdu (native)}
@@ -197,10 +194,7 @@
 \section{Achievements \& Test Scores}
   \resumeSubHeadingListStart
     \resumeItemPlain{\textbf{Test Scores}: IELTS 8.0/9.0; GRE Quantitative 165/170}
-    \resumeItemPlain{\textbf{Competitive Programming}: ICPC Asia Topi Regionals
-    2022: 19\textsuperscript{th} place; Google Kickstart (May 2022):
-    6\textsuperscript{th} place country-wide}
-         
+    \resumeItemPlain{\textbf{Competitive Programming}: ICPC Asia Topi Regionals 2022: 19\textsuperscript{th} place; Google Kickstart (May 2022): 6\textsuperscript{th} place country-wide}
   \resumeSubHeadingListEnd
 
 \begin{center}
