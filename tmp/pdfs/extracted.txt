@@ -1,0 +1,55 @@
+Abbas TaqviMobile: +39 340 065 5647
+Email: abbastaqvi81@gmail.com LinkedIn: linkedin.com/in/abbastaqvi
+Location: Milan, Italy GitHub: github.com/smabbasht
+Professional Summary
+•Data engineer and M.S. Data Science student at Milano-Bicocca seeking a data analysis internship in Italy. Experience in
+SQL-based analytics, Python data preparation, and exploratory analysis with Power BI and Excel. Built a natural-language
+SQL tool that reduced analyst turnaround by 41%, and pipelines that made financial and risk-management data available for
+analysis.
+Education
+•Università degli Studi di Milano-BicoccaMilan, Italy
+Master of Science in Data Science Oct 2025 – Present
+•Habib University Karachi, Pakistan
+Bachelor of Science in Computer Science; GPA: 3.31/4.0; 100% merit scholarship (HU-TOPS) Aug 2020 – May 2024
+Experience
+•Logiciel Services LLCUnited States (Remote)
+Data Engineer I May 2024 – Nov 2025
+◦SQL Analytics: Built a Python Text2SQL chatbot with LangGraph and Trino, enabling business teams to query
+financial data in natural language through a REST API; reduced analyst turnaround by 41%.
+◦Financial Data Platform: Built an S3 lakehouse with Spark, Trino and AWS Glue for 30B+ financial records,
+supporting sub-second queries with appropriate filters. Applied schema control, partitioning and file compaction to
+improve reliability.
+◦Data Preparation: Developed Spark (Scala) pipelines for 375+ daily stock-market FIX sessions, with batch and
+streaming ingestion orchestrated by Airflow workflows generated from YAML.
+•United Bank LimitedKarachi, Pakistan
+Data Engineering Intern May 2023 – Jun 2023
+◦Schema Validation: Built an Informatica pipeline ingesting Qatar and Bahrain data into a Hive lake; validated
+production AI pipelines against regional schemas across 3 countries.
+•EdLab Pakistan Remote (Volunteer)
+Data Analysis Intern Sep 2021 – Oct 2021
+◦Exploratory Analysis: Performed exploratory data analysis and built visualizations of key trends using Power BI and
+Excel.
+•Habib University, Office of Institutional ResearchKarachi, Pakistan
+Data Researcher Aug 2021 – Sep 2021
+◦Research Data Preparation: Collected, cleaned and manipulated institutional data with Pandas, NumPy and Excel
+to support research and reporting.
+•ImproData Pinedale, WY (Remote)
+Junior Data Engineer Jan 2021 – May 2022
+◦Risk Data Pipelines: Built cybersecurity risk-management pipelines in Azure Databricks (PySpark) using bronze,
+silver and gold layers. Automated JSON ingestion into BigQuery via GCP Cloud Functions and GCS, eliminating about
+3 hours of daily manual work.
+Projects
+•Astroflow: Bayesian Parameter Inference: Developed a normalizing-flow framework in PyTorch for binary black-hole
+population modeling; reduced inference from roughly 300 minutes to about 2 seconds. Built a Django interface to organize
+experiments and visualize posterior samples.
+Skills
+•Analysis & Reporting: SQL, Python (Pandas, NumPy, Matplotlib), R, Power BI, Excel, R Markdown
+•Data Preparation: ETL/ELT, Spark (PySpark, Scala), Databricks, Airflow, Informatica, schema management
+•Databases & Cloud: PostgreSQL, BigQuery, Trino, AWS (S3, Glue), Azure Databricks, GCP (GCS, Cloud Functions)
+•Tools: Git, Linux, Docker
+•Spoken Languages: English (C1), Italian (A2), Urdu (native)
+Achievements & Test Scores
+•Test Scores: IELTS 8.0/9.0; GRE Quantitative 165/170
+•Competitive Programming: ICPC Asia Topi Regionals 2022: 19th place; Google Kickstart (May 2022): 6th place
+country-wide
+I authorize the processing of my personal data in accordance with EU Regulation 2016/679 (GDPR).
