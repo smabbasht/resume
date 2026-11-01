@@ -19,12 +19,11 @@
 \input{glyphtounicode}
 
 \pagestyle{fancy}
-\fancyhf{} % Clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -32,36 +31,20 @@
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 \setlength{\footskip}{4pt}
 
-% Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generated PDF is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
 \newcommand{\resumeItem}[2]{
-  \item\small{
-    \textbf{#1}{: #2 \vspace{-2pt}}
-  }
+  \item\small{\textbf{#1}{: #2 \vspace{-2pt}}}
 }
-
-% Just in case someone needs a heading that does not need to be in a list
-\newcommand{\resumeHeading}[4]{
-    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small #3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -69,31 +52,13 @@
       \textit{\small #3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
 }
-
-\newcommand{\resumeSubSubheading}[2]{
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small #1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeItemPlain}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
+\newcommand{\resumeItemPlain}[1]{\item\small{{#1 \vspace{-2pt}}}}
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-
 \renewcommand{\labelitemii}{$\circ$}
-
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \begin{document}
 
@@ -104,13 +69,11 @@
   Location: Milan, Italy & GitHub: \href{https://github.com/smabbasht}{github.com/smabbasht} \\
 \end{tabular*}
 
-
 %-----------SUMMARY-----------------
 \section{Professional Summary}
   \resumeSubHeadingListStart
-  \resumeItemPlain{Data analyst and M.S. Data Science student at Milano-Bicocca with hands-on experience translating raw data into business insights. Built a natural-language SQL tool that reduced analyst turnaround by 41\%, engineered pipelines making 30B+ financial records instantly queryable, and delivered exploratory analyses and visualizations across finance, education, and risk domains using SQL, Python, Power BI, and Excel.}
+  \resumeItemPlain{Analytics engineer and M.S. Data Science student at Milano-Bicocca, based in Milan. Strong SQL foundation with hands-on experience in dbt data modelling, BigQuery, GCP, and Airflow for building robust data pipelines and mart tables. Built financial and risk-management data platforms processing 30B+ records, and automated pipelines making data instantly available for reconciliation and reporting. Experienced collaborating with engineering and finance stakeholders to ensure data integrity and deliver trustworthy analytics assets.}
   \resumeSubHeadingListEnd
-
 
 %-----------EDUCATION-----------------
 \section{Education}
@@ -123,7 +86,6 @@
       {Bachelor of Science in Computer Science; GPA: 3.31/4.0; 100\% merit scholarship (HU-TOPS)}{Aug 2020 -- May 2024}
   \resumeSubHeadingListEnd
 
-
 %-----------EXPERIENCE-----------------
 \section{Experience}
   \resumeSubHeadingListStart
@@ -132,28 +94,36 @@
       {Logiciel Services LLC}{United States (Remote)}
       {Data Engineer I}{May 2024 -- Nov 2025}
       \resumeItemListStart
-        \resumeItem{Analytics Tooling}
-          {Built Metosi, a multi-agent Text2SQL chatbot (Python, LangGraph, Trino) that lets business teams query a 30B-record financial data lake in natural language through a REST API, reducing analyst turnaround by 41\%.}
-        \resumeItem{Data Platform}
-          {Designed an S3 lakehouse with Spark, Trino and AWS Glue for 30B+ financial records, enabling sub-second analytical queries with structured partitioning, schema control, and file compaction for reliable reporting.}
-        \resumeItem{Pipeline Engineering}
-          {Developed Spark (Scala) ingestion pipelines for 375+ daily stock-market FIX sessions, with Airflow orchestration auto-generated from YAML, ensuring consistent and auditable data delivery for downstream analysis.}
+        \resumeItem{Financial Data Modelling \& Pipelines}
+          {Built an S3 lakehouse with Spark, Trino and AWS Glue for 30B+ financial records with structured medallion layers; applied dbt-style modelling patterns — from raw source ingestion to consumable mart tables — enabling sub-second analytical queries and reliable downstream reporting.}
+        \resumeItem{Data Quality \& Automation}
+          {Implemented schema control, partitioning, and file compaction to enforce data quality across financial datasets; developed Airflow-orchestrated pipelines (dynamic DAGs from YAML) for consistent, auditable data delivery and reconciliation support.}
+        \resumeItem{Stakeholder Analytics}
+          {Built a multi-agent Text2SQL tool (Python, LangGraph, Trino) enabling business and finance stakeholders to self-serve queries over the data lake, reducing analyst turnaround by 41\%.}
       \resumeItemListEnd
 
     \resumeSubheading
       {United Bank Limited}{Karachi, Pakistan}
       {Data Engineering Intern}{May 2023 -- Jun 2023}
       \resumeItemListStart
-        \resumeItem{Cross-Region Data Integration}
-          {Built an Informatica pipeline ingesting data from Qatar and Bahrain into a Hive data lake, and validated production AI pipelines against regional schemas across 3 countries, ensuring data consistency for analytics.}
+        \resumeItem{Financial Data Integration}
+          {Built an Informatica pipeline integrating banking data from Qatar and Bahrain into a Hive data lake; validated production pipelines against regional schemas across 3 countries, ensuring data integrity for reconciliation and analytics.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {ImproData}{Pinedale, WY (Remote)}
+      {Junior Data Engineer}{Jan 2021 -- May 2022}
+      \resumeItemListStart
+        \resumeItem{Risk Data Pipelines on GCP \& BigQuery}
+          {Built cybersecurity risk-management pipelines in Azure Databricks (PySpark) with bronze, silver and gold layers; automated JSON ingestion into BigQuery via GCP Cloud Functions, eliminating $\sim$3 hours of daily manual work.}
       \resumeItemListEnd
 
     \resumeSubheading
       {Habib University, Office of Institutional Research}{Karachi, Pakistan}
       {Data Researcher}{Aug 2021 -- Sep 2021}
       \resumeItemListStart
-        \resumeItem{Institutional Analytics}
-          {Collected, cleaned, and manipulated institutional datasets with Pandas, NumPy, and Excel to support research reporting and organizational decision-making.}
+        \resumeItem{Data Wrangling \& Reporting}
+          {Collected, cleaned, and structured institutional datasets using Pandas, NumPy, and Excel to support research reporting and organizational decision-making.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -161,51 +131,36 @@
       {Data Analysis Intern}{Sep 2021 -- Oct 2021}
       \resumeItemListStart
         \resumeItem{Exploratory Analysis}
-          {Performed EDA on education datasets and built Power BI and Excel visualizations of key trends to support program evaluation.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {ImproData}{Pinedale, WY (Remote)}
-      {Junior Data Engineer}{Jan 2021 -- May 2022}
-      \resumeItemListStart
-        \resumeItem{Risk Data Pipelines}
-          {Built cybersecurity risk-management pipelines in Azure Databricks (PySpark) with medallion layers; automated JSON ingestion into BigQuery via GCP Cloud Functions, eliminating $\sim$3 hours of daily manual work.}
+          {Performed EDA and built Power BI visualizations to communicate key trends to stakeholders.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
-
 
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
     \resumeSubItem{Astroflow: Bayesian Parameter Inference}
-      {Normalizing-flow framework in PyTorch for binary black-hole population modeling; reduced inference from $\sim$300 minutes to $\sim$2 seconds. Built a Django interface to organize experiments and visualize posterior distributions.}
+      {Normalizing-flow framework in PyTorch for predictive modelling; reduced inference from $\sim$300 minutes to $\sim$2 seconds. Built a Django interface to run pipelines and visualize posterior distributions.}
   \resumeSubHeadingListEnd
-
 
 %--------SKILLS------------
 \section{Skills}
   \resumeSubHeadingListStart
-    \resumeItemPlain{\textbf{Analysis \& Reporting}: SQL, Python (Pandas, NumPy, Matplotlib), R, Power BI, Excel, R Markdown}
-    \resumeItemPlain{\textbf{Data Preparation}: ETL/ELT, Spark (PySpark, Scala), Databricks, Airflow, Informatica, schema management}
-    \resumeItemPlain{\textbf{Databases \& Cloud}: PostgreSQL, BigQuery, Trino, AWS (S3, Glue), Azure Databricks, GCP (GCS, Cloud Functions)}
+    \resumeItemPlain{\textbf{Data Modelling \& Analytics}: SQL, dbt, Python (Pandas, NumPy), R, Power BI, Excel}
+    \resumeItemPlain{\textbf{Data Pipelines \& Quality}: ETL/ELT, Spark (PySpark, Scala), Databricks, Airflow, Informatica, schema management, data quality checks}
+    \resumeItemPlain{\textbf{Databases \& Cloud}: BigQuery, PostgreSQL, Trino, GCP (GCS, Cloud Functions), AWS (S3, Glue), Azure Databricks}
     \resumeItemPlain{\textbf{Tools}: Git, Linux, Docker}
     \resumeItemPlain{\textbf{Spoken Languages}: English (C1), Italian (A2), Urdu (native)}
   \resumeSubHeadingListEnd
-
 
 %-----------ACHIEVEMENTS-----------------
 \section{Achievements \& Test Scores}
   \resumeSubHeadingListStart
     \resumeItemPlain{\textbf{Test Scores}: IELTS 8.0/9.0; GRE Quantitative 165/170}
-    \resumeItemPlain{\textbf{Competitive Programming}: ICPC Asia Topi Regionals
-    2022: 19\textsuperscript{th} place; Google Kickstart (May 2022):
-    6\textsuperscript{th} place country-wide}
-         
+    \resumeItemPlain{\textbf{Competitive Programming}: ICPC Asia Topi Regionals 2022: 19\textsuperscript{th} place; Google Kickstart (May 2022): 6\textsuperscript{th} place country-wide}
   \resumeSubHeadingListEnd
 
 \begin{center}
 \scriptsize I authorize the processing of my personal data in accordance with EU Regulation 2016/679 (GDPR).
 \end{center}
 
-%-------------------------------------------
 \end{document}
