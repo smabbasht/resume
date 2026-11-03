@@ -106,24 +106,12 @@
 %-----------SUMMARY-----------------
 \section{Professional Summary}
   \resumeSubHeadingListStart
-  \resumeItemPlain{Data engineer and M.S. Data Science student at Milano-Bicocca
-  with experience building cloud data platforms and batch and streaming
-  pipelines. Built an AWS lakehouse for querying 30B+ records in under a second,
-  a Rust ETL framework that processes data 10$\times$ faster than the legacy
-  .NET system, and a LangGraph Text2SQL agent that reduced analyst turnaround
-  by 41\%. Seeking data engineering internship opportunities in Italy.}
-  \resumeSubHeadingListEnd
-
-
-%-----------EDUCATION-----------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Universit\`a degli Studi di Milano-Bicocca}{Milan, Italy}
-      {Master of Science in Data Science; Grade: 26/30}{Oct 2025 -- Present}
-    \resumeSubheading
-      {Habib University}{Karachi, Pakistan}
-      {Bachelor of Science in Computer Science; GPA: 3.31; 100\% merit scholarship (HU-TOPS)}{Aug 2020 -- May 2024}
+  \resumeItemPlain{Data engineer experienced in data integration, ETL/ELT,
+  batch and streaming pipelines, and cloud data platforms. Built an AWS lakehouse
+  for querying 30B+ records in under a second and a Rust ETL framework that
+  processes data 10$\times$ faster than the legacy .NET system. Hands-on with
+  Python, AWS Glue, SQL, and production data workflows, with a focus on reliable
+  data movement and maintainable systems.}
   \resumeSubHeadingListEnd
 
 
@@ -173,7 +161,7 @@
       {Data Engineering Intern}{May 2023 -- Jun 2023}
       \resumeItemListStart
         \resumeItem{Migration Pipeline}
-          {Built a cross-region migration pipeline in Informatica and validated ingestion across 3 countries.}
+          {Built a cross-region Informatica pipeline ingesting Qatar and Bahrain data into a Hive data lake; validated production data schemas and ingestion across Pakistan, Qatar, and Bahrain.}
       \resumeItemListEnd
 
 
@@ -185,8 +173,6 @@
   \resumeSubHeadingListStart
     \resumeSubItem{Kuza: End-to-End Data Platform}
       {Spark (Scala) ingestion for 375+ daily sessions, Kafka streaming, S3 lakehouse, Trino and Airflow with DAGs auto-generated from YAML (Scala, Spark, Kafka, Airflow, Trino, AWS, Docker).}
-    \resumeSubItem{Yohsin: Zero-Copy Object Serializer}
-      {Rust serializer using memory-mapped files, O(1) random access and a write-ahead log for sub-50 ms recovery; sustained 1M records/s (2.25 GB/s). Built in 24 hours at a hackathon (Rust, tokio, mmap).}
   \resumeSubHeadingListEnd
 
 
@@ -194,10 +180,12 @@
 \section{Skills}
   \resumeSubHeadingListStart
     \resumeItemPlain{\textbf{Languages}: Python, Rust, Scala, C/C++ (CUDA), Go, SQL, JavaScript}
-    \resumeItemPlain{\textbf{Data \& Cloud}: Spark, Kafka, Airflow, Trino, Iceberg, Databricks, AWS (S3, EKS, EC2, Glue), Azure, GCP}
-    \resumeItemPlain{\textbf{Systems \& Infrastructure}: Linux, Docker, Kubernetes (EKS, MicroK8s), Traefik, REST APIs, gRPC, Git}
+    \resumeItemPlain{\textbf{Data Integration}: ETL/ELT, AWS Glue, AWS DMS, Microsoft SSIS, Qlik Data Integration, Oracle GoldenGate, Transactional Replication}
+    \resumeItemPlain{\textbf{Messaging}: Kafka, RabbitMQ, Amazon MQ, AWS Kinesis}
+    \resumeItemPlain{\textbf{Data \& Cloud}: Spark, Airflow, Trino, Iceberg, Databricks, AWS (S3, EKS, EC2), Azure, GCP}
+    \resumeItemPlain{\textbf{Systems \& Infrastructure}: Linux, Terraform, Docker, Kubernetes (EKS, MicroK8s), Traefik, REST APIs, gRPC, Git}
     \resumeItemPlain{\textbf{AI / ML}: PyTorch, JAX, TensorFlow, LangChain, LangGraph, Pydantic-AI}
-    \resumeItemPlain{\textbf{Databases}: PostgreSQL, MongoDB, Neo4j, Qdrant, Weaviate, Amazon RDS}
+    \resumeItemPlain{\textbf{Databases}: SQL, SQL Server, Oracle, PostgreSQL, MongoDB, Neo4j, Qdrant, Weaviate, Amazon RDS}
     \resumeItemPlain{\textbf{Spoken Languages}: English (C1), Italian (A2)}
   \resumeSubHeadingListEnd
 
@@ -215,6 +203,17 @@
 \begin{center}
 \scriptsize I authorize the processing of my personal data in accordance with EU Regulation 2016/679 (GDPR).
 \end{center}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Universit\`a degli Studi di Milano-Bicocca}{Milan, Italy}
+      {Master of Science in Data Science; Grade: 26/30}{Oct 2025 -- Present}
+    \resumeSubheading
+      {Habib University}{Karachi, Pakistan}
+      {Bachelor of Science in Computer Science; GPA: 3.31; 100\% merit scholarship (HU-TOPS)}{Aug 2020 -- May 2024}
+  \resumeSubHeadingListEnd
 
 %-------------------------------------------
 \end{document}
