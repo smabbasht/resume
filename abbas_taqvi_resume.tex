@@ -107,11 +107,12 @@
 \section{Professional Summary}
   \resumeSubHeadingListStart
   \resumeItemPlain{Data engineer and M.S. Data Science student at Milano-Bicocca
-  with experience building cloud data platforms and batch and streaming
+  with experience building production data platforms and batch and streaming
   pipelines. Built an AWS lakehouse for querying 30B+ records in under a second,
   a Rust ETL framework that processes data 10$\times$ faster than the legacy
   .NET system, and a LangGraph Text2SQL agent that reduced analyst turnaround
-  by 41\%. Seeking data engineering internship opportunities in Italy.}
+  by 41\%. Experienced in ingestion validation, data quality, lineage and
+  versioning, annotation workflows, and LLM integrations.}
   \resumeSubHeadingListEnd
 
 
@@ -136,20 +137,19 @@
       {Data Engineer I}{May 2024 -- Nov 2025}
       \resumeItemListStart
         \resumeItem{Data Platform}
-          {Built the data platform from scratch, using Airflow for
-          orchestration, Spark (Scala) for processing (ETL/ELT), Kafka for
-          streaming, Amazon S3 for storage, Iceberg as the table format, Trino
-          for query engine and AWS Glue for metadata. Simplified a
-          12-component architecture to 5, housing 30B+ records queryable in
-          $<$1s.}
+          {Built a production data platform with Kafka streaming ingestion,
+          Airflow orchestration, Spark (Scala) ETL, S3 and Iceberg storage,
+          Trino queries and AWS Glue metadata. Applied schema controls and
+          ingestion validation across pipelines. Simplified a 12-component
+          architecture to 5, housing 30B+ records queryable in $<$1s.}
         \resumeItem{Ferroflow}
           {Rust ETL framework with composable processor/pipeline abstractions,
           replacing a legacy .NET monolith: 500 min $\rightarrow$ 50 min daily
           (10$\times$ speedup), saving 400 EC2-minutes per day.}
         \resumeItem{Text2SQL Chatbot}
-          {Multi-agent chatbot (Python, LangChain, LangGraph, Trino) that translates
-          natural language into SQL that queries the data lake via REST API, reducing
-          analyst turnaround by 41\% for business teams.}
+          {Built a multi-agent LLM data interface (Python, LangChain, LangGraph,
+          Trino) that translates natural language into SQL over the data lake
+          via REST API, reducing analyst turnaround by 41\%.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -194,9 +194,9 @@
 \section{Skills}
   \resumeSubHeadingListStart
     \resumeItemPlain{\textbf{Languages}: Python, Rust, Scala, C/C++ (CUDA), Go, SQL, JavaScript}
-    \resumeItemPlain{\textbf{Data \& Cloud}: Spark, Kafka, Airflow, Trino, Iceberg, Databricks, AWS (S3, EKS, EC2, Glue), Azure, GCP}
+    \resumeItemPlain{\textbf{Data \& Cloud}: Spark, Kafka, Airflow, Trino, Iceberg, Databricks, AWS (S3, EKS, EC2, Glue), Azure, GCP; schema design, data quality and ingestion validation, data lineage and versioning}
     \resumeItemPlain{\textbf{Systems \& Infrastructure}: Linux, Docker, Kubernetes (EKS, MicroK8s), Traefik, REST APIs, gRPC, Git}
-    \resumeItemPlain{\textbf{AI / ML}: PyTorch, JAX, TensorFlow, LangChain, LangGraph, Pydantic-AI}
+    \resumeItemPlain{\textbf{AI / ML}: PyTorch, JAX, TensorFlow, LangChain, LangGraph, Pydantic-AI, RAG, MCP integrations, image labeling and annotation workflows}
     \resumeItemPlain{\textbf{Databases}: PostgreSQL, MongoDB, Neo4j, Qdrant, Weaviate, Amazon RDS}
     \resumeItemPlain{\textbf{Spoken Languages}: English (C1), Italian (A2)}
   \resumeSubHeadingListEnd
