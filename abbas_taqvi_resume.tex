@@ -106,13 +106,12 @@
 %-----------SUMMARY-----------------
 \section{Professional Summary}
   \resumeSubHeadingListStart
-  \resumeItemPlain{Data engineer and M.S. Data Science student at Milano-Bicocca
-  with experience in distributed data processing, analytics and cloud data
-  platforms. Built Spark (Scala) batch and streaming pipelines on AWS for a
-  lakehouse querying 30B+ records in under a second, a Rust ETL framework that
-  processes data 10$\times$ faster than the legacy .NET system, and a LangGraph
-  Text2SQL agent that reduced analyst turnaround by 41\%. Seeking data
-  engineering internship opportunities in Italy.}
+  \resumeItemPlain{Data engineer and M.S. Data Science student at Milano-Bicocca,
+  focused on analytics engineering and data products. Built an AWS lakehouse
+  for financial data with Spark (Scala) pipelines and Trino queries over 30B+
+  records in under a second, a Rust ETL framework 10$\times$ faster than the
+  legacy .NET system, and a LangGraph Text2SQL agent that reduced analyst
+  turnaround by 41\%.}
   \resumeSubHeadingListEnd
 
 
@@ -137,20 +136,19 @@
       {Data Engineer I}{May 2024 -- Nov 2025}
       \resumeItemListStart
         \resumeItem{Data Platform}
-          {Built the data platform from scratch, using Airflow for
-          orchestration, Spark (Scala) for processing (ETL/ELT), Kafka for
-          streaming, Amazon S3 for storage, Iceberg as the table format, Trino
-          for query engine and AWS Glue for metadata. Simplified a
-          12-component architecture to 5, housing 30B+ records queryable in
-          $<$1s.}
+          {Designed and built the data platform end-to-end: Airflow
+          orchestration, Spark (Scala) ETL/ELT, Kafka streaming, S3 and Iceberg
+          storage, Trino queries and AWS Glue metadata. Improved schema control,
+          compaction and partitioning, simplifying 12 components to 5 and
+          enabling queries over 30B+ financial records in $<$1s.}
         \resumeItem{Ferroflow}
           {Rust ETL framework with composable processor/pipeline abstractions,
           replacing a legacy .NET monolith: 500 min $\rightarrow$ 50 min daily
           (10$\times$ speedup), saving 400 EC2-minutes per day.}
         \resumeItem{Text2SQL Chatbot}
-          {Multi-agent chatbot (Python, LangChain, LangGraph, Trino) that translates
-          natural language into SQL that queries the data lake via REST API, reducing
-          analyst turnaround by 41\% for business teams.}
+          {Built a multi-agent data access product (Python, LangChain, LangGraph,
+          Trino) that turns business questions into SQL over the data lake via
+          REST API, reducing analyst turnaround by 41\%.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -194,10 +192,11 @@
 %--------SKILLS------------
 \section{Skills}
   \resumeSubHeadingListStart
-    \resumeItemPlain{\textbf{Languages}: Python, Rust, Scala, C/C++ (CUDA), Go, SQL, JavaScript}
+    \resumeItemPlain{\textbf{Languages}: SQL, Python, Rust, Scala, C/C++ (CUDA), Go, JavaScript}
+    \resumeItemPlain{\textbf{Analytics Engineering}: dbt, dimensional modeling, semantic modeling, data products, Claude, Cursor, Looker, Hex, Tableau, Power BI}
     \resumeItemPlain{\textbf{Data \& Cloud}: Spark (Scala, PySpark), Hadoop/Hive, distributed data processing, Kafka, Airflow, Trino, Iceberg, Databricks, AWS (S3, EKS, EC2, Glue), Azure, GCP}
     \resumeItemPlain{\textbf{Systems \& Infrastructure}: Linux, Docker, Kubernetes (EKS, MicroK8s), Traefik, REST APIs, gRPC, Git}
-    \resumeItemPlain{\textbf{AI / ML \& Analytics}: Machine learning, statistical modeling, descriptive statistics, exploratory data analysis, data visualization (Power BI, Matplotlib), PyTorch, JAX, TensorFlow, LangChain, LangGraph, Pydantic-AI}
+    \resumeItemPlain{\textbf{AI / ML \& Analytics}: Machine learning, statistical modeling, descriptive statistics, exploratory data analysis, data visualization (Matplotlib), PyTorch, JAX, TensorFlow, LangChain, LangGraph, Pydantic-AI}
     \resumeItemPlain{\textbf{Databases}: PostgreSQL, MongoDB, Neo4j, Elasticsearch, Qdrant, Weaviate, Amazon RDS}
     \resumeItemPlain{\textbf{Spoken Languages}: English (C1), Italian (A2)}
   \resumeSubHeadingListEnd
