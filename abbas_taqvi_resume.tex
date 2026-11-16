@@ -107,10 +107,10 @@
 \section{Professional Summary}
   \resumeSubHeadingListStart
   \resumeItemPlain{Data engineer and M.S. Data Science student at Milano-Bicocca
-  with experience building cloud data platforms and batch and streaming
-  pipelines. Built an AWS lakehouse for querying 30B+ records in under a second,
+  with experience designing data sources, ETL pipelines, and analytical
+  platforms. Built an AWS lakehouse for querying 30B+ records in under a second,
   a Rust ETL framework that processes data 10$\times$ faster than the legacy
-  .NET system, and a LangGraph Text2SQL agent that reduced analyst turnaround
+  .NET system, and a Text2SQL analytics solution that reduced analyst turnaround
   by 41\%. Seeking data engineering internship opportunities in Italy.}
   \resumeSubHeadingListEnd
 
@@ -136,20 +136,18 @@
       {Data Engineer I}{May 2024 -- Nov 2025}
       \resumeItemListStart
         \resumeItem{Data Platform}
-          {Built the data platform from scratch, using Airflow for
-          orchestration, Spark (Scala) for processing (ETL/ELT), Kafka for
-          streaming, Amazon S3 for storage, Iceberg as the table format, Trino
-          for query engine and AWS Glue for metadata. Simplified a
-          12-component architecture to 5, housing 30B+ records queryable in
-          $<$1s.}
+          {Designed and implemented data sources and batch/streaming ETL with
+          Airflow, Spark (Scala), Kafka, S3, Iceberg, Trino and AWS Glue.
+          Simplified a 12-component architecture to 5 and enabled analytical
+          queries over 30B+ records in $<$1s.}
         \resumeItem{Ferroflow}
           {Rust ETL framework with composable processor/pipeline abstractions,
           replacing a legacy .NET monolith: 500 min $\rightarrow$ 50 min daily
           (10$\times$ speedup), saving 400 EC2-minutes per day.}
         \resumeItem{Text2SQL Chatbot}
-          {Multi-agent chatbot (Python, LangChain, LangGraph, Trino) that translates
-          natural language into SQL that queries the data lake via REST API, reducing
-          analyst turnaround by 41\% for business teams.}
+          {Implemented and supported a multi-agent analytics solution (Python,
+          LangChain, LangGraph, Trino) that turns business questions into SQL
+          over the data lake via REST API, reducing analyst turnaround by 41\%.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -157,7 +155,9 @@
       {Junior Data Engineer}{Jan 2021 -- May 2022}
       \resumeItemListStart
         \resumeItem{Data Pipelines}
-          {Built pipelines on Azure Databricks (PySpark) and automated ingestion via GCP Cloud Functions (JSON $\rightarrow$ GCS $\rightarrow$ BigQuery), eliminating 3 hours of daily manual work.}
+          {Built analytical pipelines on Azure Databricks (PySpark) and
+          automated ingestion via GCP Cloud Functions (JSON $\rightarrow$ GCS
+          $\rightarrow$ BigQuery), eliminating 3 hours of daily manual work.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -165,7 +165,9 @@
       {DevOps Intern}{Jul 2023 -- Aug 2023}
       \resumeItemListStart
         \resumeItem{Kubernetes Migration}
-          {Migrated production services from AWS EKS to on-premise Kubernetes (MicroK8s): wrote Dockerfiles, Helm charts and a Traefik reverse-proxy config, with a zero-downtime cutover.}
+          {Migrated production services from AWS EKS to on-premise Kubernetes
+          (MicroK8s), writing Dockerfiles, Helm charts and Traefik configuration;
+          supported go-live with a zero-downtime cutover.}
       \resumeItemListEnd
 
     \resumeSubheading
@@ -173,7 +175,8 @@
       {Data Engineering Intern}{May 2023 -- Jun 2023}
       \resumeItemListStart
         \resumeItem{Migration Pipeline}
-          {Built a cross-region migration pipeline in Informatica and validated ingestion across 3 countries.}
+          {Built a cross-region pipeline in Informatica and validated ingestion
+          against regional schemas across 3 countries.}
       \resumeItemListEnd
 
 
@@ -194,10 +197,11 @@
 \section{Skills}
   \resumeSubHeadingListStart
     \resumeItemPlain{\textbf{Languages}: Python, Rust, Scala, C/C++ (CUDA), Go, SQL, JavaScript}
-    \resumeItemPlain{\textbf{Data \& Cloud}: Spark, Kafka, Airflow, Trino, Iceberg, Databricks, AWS (S3, EKS, EC2, Glue), Azure, GCP}
+    \resumeItemPlain{\textbf{Data \& Cloud}: Spark, Kafka, Airflow, Trino, Iceberg, Databricks, AWS (S3, EKS, EC2, Glue), Azure, GCP, Informatica, Talend, DataStage, ETL/ELT, data integration}
     \resumeItemPlain{\textbf{Systems \& Infrastructure}: Linux, Docker, Kubernetes (EKS, MicroK8s), Traefik, REST APIs, gRPC, Git}
     \resumeItemPlain{\textbf{AI / ML}: PyTorch, JAX, TensorFlow, LangChain, LangGraph, Pydantic-AI}
-    \resumeItemPlain{\textbf{Databases}: PostgreSQL, MongoDB, Neo4j, Qdrant, Weaviate, Amazon RDS}
+    \resumeItemPlain{\textbf{Databases}: PostgreSQL, Oracle, SQL Server, MongoDB, Neo4j, Qdrant, Weaviate, Amazon RDS; SQL, entity-relationship modeling, data modeling, DBMS}
+    \resumeItemPlain{\textbf{Analytics}: KPI design and calculation frameworks, reporting models, monitoring dashboards, Power BI, go-live support, application maintenance}
     \resumeItemPlain{\textbf{Spoken Languages}: English (C1), Italian (A2)}
   \resumeSubHeadingListEnd
 
